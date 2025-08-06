@@ -1,6 +1,23 @@
 {
   "welcome": "PTT Mobil'e Hoşgeldiniz",
   "login": "Giriş Yap",
-  "email": "E-posta adresiniz",
-  "language-abstractions": "TR"
+  "forget": "Şifremi Unuttum",
+  "verification": "Doğrulama",
+  "language-abstractions": "TR",
+  "subtitleLogin": "Giriş Yap",
+  "emailholder": "E-posta adresinizi giriniz",
+  "emailsubtitle": "E-posta",
+  "passsubtitle": "Şifre",
+  "aktivasyonsubtitle": "Aktivasyon Kodu",
+  "ülkesubtitle": "Ülke",
+  "newpasssubtitle": "Yeni Şifre",
+  "newpassconfirmsubtitle": "Yeni Şifre Tekrar",
+  "ilçesubtitle": "İlçe",
+  "newpasstrysubtitle": "Yeni Şifre Tekrar",
+  "tcsubtitle": "T.C.Kimlik Numarası",
+  "namesurnamesubtitle": "Ad/Soyad",
+  "telsubtitle": "Telefon Numarası",
+  "ilsubtitle": "İl",
+  "passholder": "Şifrenizi giriniz"
+
 }

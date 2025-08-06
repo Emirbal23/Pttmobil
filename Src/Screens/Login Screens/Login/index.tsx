@@ -10,7 +10,11 @@ import {
   TextInput,
 } from 'react-native';
 import React from 'react';
-import { LoginNavigationBar, LoginBackground } from '../../../Components';
+import {
+  LoginNavigationBar,
+  LoginSubtitle,
+  LoginEntry,
+} from '../../../Components';
 import images from '../../../Assets/images';
 import icons from '../../../Assets/icons';
 import styles from './style';
@@ -55,7 +59,27 @@ const Login = () => {
     <View style={styles.BackGround}>
       <SafeAreaView style={{ flex: 1 }}>
         <LoginNavigationBar />
-        <LoginBackground />
+        <View style={styles.Container}>
+          <ImageBackground
+            source={images.LoginBackground}
+            style={styles.BackGroundContainer}
+          >
+            <Text style={styles.WelcomeText}>{t('welcome')}</Text>
+          </ImageBackground>
+          <View style={styles.WhiteContainer}>
+            <LoginSubtitle type="login" />
+            <LoginEntry
+              iconType="user"
+              labelKey="emailsubtitle"
+              placeholderKey="emailholder"
+            />
+            <LoginEntry
+              iconType="pass"
+              labelKey="passsubtitle"
+              placeholderKey="passholder"
+            />
+          </View>
+        </View>
       </SafeAreaView>
     </View>
   );

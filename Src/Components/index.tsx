@@ -1,3 +1,4 @@
 import LoginNavigationBar from './LoginNavigationBar';
-import LoginBackground from './LoginBackground';
-export { LoginNavigationBar, LoginBackground };
+import LoginSubtitle from './LoginSubtitle';
+import LoginEntry from './LoginEntry';
+export { LoginNavigationBar, LoginSubtitle, LoginEntry };

@@ -1,0 +1,25 @@
+import DeviceInfo from 'react-native-device-info';
+import { StyleSheet } from 'react-native';
+import {
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
+import { s } from 'react-native-size-matters';
+
+const isTablet = DeviceInfo.isTablet();
+
+const style = StyleSheet.create({
+  SubtitleText: {
+    fontSize: isTablet ? s(22) : s(15),
+    color: '#223F46',
+    textAlign: 'center',
+    fontWeight: '600',
+  },
+  Container: {
+    height: isTablet ? wp('25%') : wp('12%'),
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+});
+
+export default style;

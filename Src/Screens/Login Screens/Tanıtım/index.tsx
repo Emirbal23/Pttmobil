@@ -15,7 +15,6 @@ import { RouterNames } from '../../../Config';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import {
   widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
 type RootStackParamList = {
