@@ -12,7 +12,7 @@ const style = StyleSheet.create({
   OutContainer: {
     alignItems: 'center',
     justifyContent: 'flex-start',
-    height: isTablet ? hp('8%') : hp('6%'),
+    height: isTablet ? hp('6%') : hp('6%'),
   },
   LogoLengContainer: {
     justifyContent: 'center',
@@ -26,7 +26,7 @@ const style = StyleSheet.create({
   },
   LanguageText: {
     color: 'white',
-    fontSize: isTablet ? s(23) : s(20),
+    fontSize: isTablet ? s(15) : s(20),
   },
   HorizantalArrow: {
     width: wp('100%'),

@@ -11,26 +11,26 @@ const isTablet = DeviceInfo.isTablet();
 const style = StyleSheet.create({
   container: {
     width: wp('100%'),
-    height: hp('10%'),
+    height: isTablet ? hp('14%') : hp('10%'),
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
   wrapper: {
-    width: isTablet ? wp('80%') : wp('85%'),
-    height: isTablet ? '75%' : '90%',
+    width: isTablet ? wp('70%') : wp('85%'),
+    height: isTablet ? '85%' : '90%',
   },
   labelContainer: {
-    height: '40%',
+    height: isTablet ? hp('4.5%') : hp('4%'),
     justifyContent: 'flex-end',
-    paddingBottom: s(10),
+    paddingBottom: isTablet ? s(5) : s(10),
   },
   label: {
     color: '#223F46',
-    fontSize: isTablet ? s(18) : s(15),
+    fontSize: isTablet ? s(12) : s(15),
   },
   inputRow: {
     width: '100%',
-    height: isTablet ? hp('10%') : hp('5.5%'),
+    height: isTablet ? hp('7%') : hp('5.5%'),
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: isTablet ? s(2) : s(1.5),
@@ -46,14 +46,14 @@ const style = StyleSheet.create({
     width: '76%',
     height: isTablet ? hp('6%') : hp('5.5%'),
     paddingHorizontal: isTablet ? s(8) : s(5),
-    fontSize: isTablet ? s(18) : s(15),
+    fontSize: isTablet ? s(12) : s(15),
   },
   toggleContainer: {
     width: '14%',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    },
 });
 
 export default style;

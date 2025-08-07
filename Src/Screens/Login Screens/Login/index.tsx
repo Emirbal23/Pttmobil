@@ -30,20 +30,6 @@ import { s } from 'react-native-size-matters';
 import { useFocusEffect } from '@react-navigation/native';
 import { BackHandler } from 'react-native';
 import { useCallback } from 'react';
-useFocusEffect(
-  useCallback(() => {
-    const onBackPress = () => {
-      return true; // Geri gitmeyi engeller
-    };
-
-    const backHandler = BackHandler.addEventListener(
-      'hardwareBackPress',
-      onBackPress,
-    );
-
-    return () => backHandler.remove();
-  }, []),
-);
 
 type RootStackParamList = {
   Login: undefined;
@@ -54,6 +40,17 @@ const windowWidth = Dimensions.get('window').width;
 const Login = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const { t } = useTranslation();
+
+  useFocusEffect(
+    useCallback(() => {
+      const onBackPress = () => true;
+      const subscription = BackHandler.addEventListener(
+        'hardwareBackPress',
+        onBackPress,
+      );
+      return () => subscription.remove();
+    }, []),
+  );
 
   return (
     <View style={styles.BackGround}>

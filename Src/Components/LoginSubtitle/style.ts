@@ -9,13 +9,13 @@ const isTablet = DeviceInfo.isTablet();
 
 const style = StyleSheet.create({
   SubtitleText: {
-    fontSize: isTablet ? s(22) : s(15),
+    fontSize: isTablet ? s(17) : s(15),
     color: '#223F46',
     textAlign: 'center',
     fontWeight: '600',
   },
   Container: {
-    height: isTablet ? wp('25%') : wp('12%'),
+    height: isTablet ? wp('10%') : wp('12%'),
     width: '100%',
     alignItems: 'center',
     justifyContent: 'flex-end',
