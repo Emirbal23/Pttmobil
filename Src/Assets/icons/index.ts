@@ -3,6 +3,8 @@ import PTTLogo from './PTTLogo.svg';
 import pttlock from './pttlock.svg';
 import pttsifregosterme from './pttsifregosterme.svg';
 import pttuser from './pttuser.svg';
+import pttsifregoster from './pttsifregoster.svg';
+import correct from './correct.svg';
 
 const icons = {
   Kapatma,
@@ -10,6 +12,8 @@ const icons = {
   pttlock,
   pttsifregosterme,
   pttuser,
+  pttsifregoster,
+  correct,
 };
 
 export default icons;
