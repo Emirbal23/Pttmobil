@@ -13,3 +13,8 @@ export interface RegisterFormValues {
 export interface ForgotPasswordFormValues {
   email: string;
 }
+
+
+export interface ForgotPasswordNextFormValues {
+password:string;
+}

@@ -63,7 +63,7 @@ const style = StyleSheet.create({
   errorText: {
     marginTop: isTablet ? s(0.5) : s(3),
     fontSize: isTablet ? s(8) : s(10),
-    color: 'red',
+    color: colors.error,
   },
 });
 

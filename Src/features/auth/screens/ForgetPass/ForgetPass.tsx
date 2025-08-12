@@ -18,13 +18,8 @@ const ForgetPass = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   return (
-    <ScreenBackground
-      backgroundSource={images.LoginBackground}
-      nav={<NavigationBar />}
-      headerContent={<Text style={styles.WelcomeText}>{t('welcome')}</Text>}
-    >
+    <ScreenBackground>
       <Subtitle type="forget" />
-
       <View style={styles.MassageContainer}>
         <Text style={styles.MassageText}>{t('ForgetScreenMassage')}</Text>
       </View>
@@ -57,15 +52,12 @@ const ForgetPass = () => {
           setError(undefined);
 
           Alert.alert(
-            t('successTitle', 'Başarılı'),
-            t(
-              'resetLinkSent',
-              'Şifre sıfırlama bağlantısı e-postanıza başarıyla gönderilmiştir',
-            ),
+            t('successTitle'),
+            t('resetLinkSent'),
             [
               {
-                text: t('ok', 'Tamam'),
-                onPress: () => navigation.navigate('Login'),
+                text: t('ok'),
+                onPress: () => navigation.navigate('ForgetpassNext'),
               },
             ],
             { cancelable: false },

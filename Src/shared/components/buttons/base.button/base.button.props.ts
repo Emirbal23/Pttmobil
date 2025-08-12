@@ -1,7 +1,7 @@
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 export interface BaseButtonProps {
-  labelKey: string;
-  onPress?: () => void;
+  children?: React.ReactNode;
+  onPress: () => void;
   disabled?: boolean;
   loading?: boolean;
   leftIcon?: React.ReactNode;

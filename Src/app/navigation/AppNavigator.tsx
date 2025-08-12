@@ -2,13 +2,21 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AppStackParamList } from '@/types/navigation';
 
-import { PromotionScreen, LoginScreen, ForgotPasswordScreen } from '@/features/auth'; 
+import {
+  PromotionScreen,
+  LoginScreen,
+  ForgotPasswordScreen,
+  ForgetpassNext,
+} from '@/features/auth';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
 const AppNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Promotion" screenOptions={{ headerShown: false }}>
+    <Stack.Navigator
+      initialRouteName="Promotion"
+      screenOptions={{ headerShown: false }}
+    >
       <Stack.Screen name="Promotion" component={PromotionScreen} />
       <Stack.Screen
         name="Login"
@@ -19,6 +27,7 @@ const AppNavigator = () => {
         }}
       />
       <Stack.Screen name="ForgetPass" component={ForgotPasswordScreen} />
+      <Stack.Screen name="ForgetpassNext" component={ForgetpassNext} />
     </Stack.Navigator>
   );
 };

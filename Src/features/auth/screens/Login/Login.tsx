@@ -42,11 +42,7 @@ const Login = () => {
   );
 
   return (
-    <ScreenBackground
-      backgroundSource={images.LoginBackground}
-      nav={<NavigationBar />}
-      headerContent={<Text style={styles.WelcomeText}>{t('welcome')}</Text>}
-    >
+    <ScreenBackground>
       <Formik
         initialValues={{ email: '', password: '' }}
         validationSchema={loginSchema}
@@ -98,7 +94,7 @@ const Login = () => {
             </View>
 
             <ButtonFactory
-              kind="primary"
+              kind="secondary"
               labelKey="login"
               onPress={handleSubmit as any}
               targetScreen="ForgetPass"

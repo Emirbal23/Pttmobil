@@ -3,7 +3,7 @@ const colors = {
   // Ana renkler
   primary: '#FFC824',
   secondary: '#FFFFFF',
-  tertiary: '#ff0000ff',
+  tertiary: '#F65353',
 
   // Metin renkleri
   textPrimary: '#000000ff',
@@ -12,8 +12,8 @@ const colors = {
   textQuaternary: '#A1ADAF',
 
   // Durum renkleri
-  success: '#28a745', 
-  error: '#dc3545', 
+  success: '#28a745',
+  error: '#dc3545',
   warning: '#ff9800',
   info: '#17a2b8',
 
@@ -23,6 +23,7 @@ const colors = {
 
   // Çizgiler & sınırlar
   border: '#E0E0E0',
+  radioshadow: '#82DEF3',
 };
 
 export default colors;

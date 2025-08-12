@@ -5,6 +5,7 @@ import DeviceInfo from 'react-native-device-info';
 import { moderateScale as s } from 'react-native-size-matters';
 import styles from './style';
 import type { BaseInputProps } from './base.input.props';
+import colors from '@/shared/theme/color';
 
 const isTablet = DeviceInfo.isTablet();
 
@@ -36,7 +37,12 @@ const BaseInput = forwardRef<RNTextInput, BaseInputProps>((props, ref) => {
           </View>
         )}
 
-        <View style={styles.inputRow}>
+        <View
+          style={[
+            styles.inputRow,
+            errorText && { borderColor: colors.tertiary },
+          ]}
+        >
           <View style={styles.iconContainer}>
             {LeftIcon ? <LeftIcon {...iconSize} /> : null}
           </View>

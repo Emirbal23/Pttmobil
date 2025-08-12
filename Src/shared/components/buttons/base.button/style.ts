@@ -12,7 +12,7 @@ const isTablet = DeviceInfo.isTablet();
 const style = StyleSheet.create({
   container: {
     width: '100%',
-    height: isTablet ? hp(11) : hp(10),
+    height: isTablet ? hp(11) : hp(9),
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
@@ -27,6 +27,8 @@ const style = StyleSheet.create({
   ButtonText: {
     color: colors.secondary,
     fontSize: isTablet ? s(12) : s(15),
+  },
+    ErrorText: {
   },
 });
 

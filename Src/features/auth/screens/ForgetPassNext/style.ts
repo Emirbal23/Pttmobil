@@ -9,6 +9,18 @@ import colors from '@/shared/theme/color';
 
 const isTablet = DeviceInfo.isTablet();
 
-const style = StyleSheet.create({});
+const style = StyleSheet.create({
+  MassageContainer: {
+    width: wp(100),
+    height: isTablet ? hp(10) : hp(6),
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  MassageText: {
+    fontSize: isTablet ? s(12) : s(13),
+    color: colors.textSecondary,
+    textAlign: 'center',
+  },
+});
 
 export default style;

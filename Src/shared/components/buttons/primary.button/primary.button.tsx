@@ -1,18 +1,28 @@
-// primary-button/PrimaryButton.tsx
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 import BaseButton from '../base.button/base.button';
 import type { PrimaryButtonProps } from './primary.button.props';
+import type { GestureResponderEvent } from 'react-native';
 
-const PrimaryButton = ({ targetScreen, onPress, ...rest }: PrimaryButtonProps) => {
-  const navigation = useNavigation();
+const PrimaryButton = ({
+  labelKey,
+  label,
+  targetScreen,
+  onPress,
+  ...rest
+}: PrimaryButtonProps) => {
+  const navigation = useNavigation<any>();
+  const { t } = useTranslation();
 
-  const handlePress = () => {
+  const handlePress = (event?: GestureResponderEvent) => {
     if (onPress) {
-      onPress();
-    } else if (targetScreen) {
-      // @ts-ignore - navigation type may vary
-      navigation.navigate(targetScreen);
+      onPress(event);
+      return;
+    }
+
+    if (targetScreen) {
+      navigation.navigate(targetScreen as never);
     }
   };
 

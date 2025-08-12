@@ -13,5 +13,5 @@ export type PasswordInputProps = Omit<
   | 'inputMode'
 > & {
   leftIcon?: IconComponent;
-  mode?: 'login' | 'register';
+  mode?: 'login' | 'register' | 'newpass';
 };

@@ -10,12 +10,6 @@ import colors from '@/shared/theme/color';
 const isTablet = DeviceInfo.isTablet();
 
 const style = StyleSheet.create({
-  WelcomeText: {
-    color: colors.secondary,
-    fontSize: isTablet ? s(14) : s(18),
-    fontWeight: 'bold',
-    marginBottom: isTablet ? s(40) : s(50),
-  },
   ForgotPassOutContainer: {
     width: wp(100),
     height: isTablet ? hp(6) : hp(5),

@@ -17,6 +17,7 @@ const Input = (props: UnifiedInputProps) => {
     default:
       return <BaseInput {...props} />;
   }
+  
 };
 
 export default Input;

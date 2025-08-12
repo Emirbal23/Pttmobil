@@ -11,6 +11,7 @@ import BaseInput from '../base.input/base.input';
 import type { PasswordInputProps } from './password.input.props';
 import icons from '@/assets/icons';
 import { isStrongPassword } from '@/shared/utils/validator';
+import { useTranslation } from 'react-i18next';
 
 const isTablet = DeviceInfo.isTablet();
 
@@ -24,6 +25,7 @@ const PasswordInput = ({
   const inputMode = mode ?? 'login';
   const [visible, setVisible] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
+  const { t } = useTranslation();
 
   const iconSize = {
     width: isTablet ? s(30) : s(24),
@@ -31,23 +33,28 @@ const PasswordInput = ({
   };
 
   const handleChangeText = (text: string) => {
-    if (error) setError(undefined); // yazarken hatayı temizle
-    onChangeText?.(text); // dışarıdan gelen handler’ı koru
+    if (error) setError(undefined); 
+    onChangeText?.(text); 
   };
 
   const handleEndEditing = (
     e: NativeSyntheticEvent<TextInputEndEditingEventData>,
   ) => {
     const text = e.nativeEvent.text?.trim() ?? '';
-    // Mode'a göre kontrol: login'de sadece boş mu, register'da güçlü şifre
-    if (!text) {
-      setError('Şifre boş bırakılamaz');
-    } else if (inputMode === 'register' && !isStrongPassword(text)) {
-      setError('Şifre en az 8 karakter, 1 büyük harf ve 1 rakam içermelidir');
+    if (inputMode === 'login') {
+      // Login ekranında yalnızca boşluk kontrolü yap
+      if (!text) {
+        setError(t('passworderror'));
+      } else {
+        setError(undefined);
+      }
+    } else if (inputMode === 'register' || inputMode === 'newpass') {
+      const validationError = isStrongPassword(text);
+      setError(validationError);
     } else {
       setError(undefined);
     }
-    onEndEditing?.(e); // dışarıdan gelen handler’ı koru
+    onEndEditing?.(e); 
   };
 
   return (
