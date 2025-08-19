@@ -1,6 +1,8 @@
 export type AppStackParamList = {
   Login: undefined;
   Promotion: undefined;
-  ForgotPass: undefined;
-  ForgetPassNext: undefined;
+  ForgotPassword: undefined;
+  ForgotPasswordNext: undefined;
+  Register: undefined;
+  RegisterNext: undefined;
 };

@@ -1,4 +1,6 @@
-export { default as LoginScreen } from './screens/Login/Login';
-export { default as ForgotPasswordScreen } from './screens/ForgetPass/ForgetPass';
-export { default as PromotionScreen } from './screens/Promotion/Promotion';
-export { default as ForgetpassNext } from './screens/ForgetPassNext/ForgetpassNext';
+export { default as Login } from './screens/login/Login';
+export { default as ForgotPassword } from './screens/forgotpassword/ForgotPassword';
+export { default as Promotion } from './screens/promotion/Promotion';
+export { default as ForgotPasswordNext } from './screens/forgotpasswordnext/ForgotPasswordNext';
+export { default as Register } from './screens/register/Register';
+export { default as RegisterNext } from './screens/registernext/RegisterNext';

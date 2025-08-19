@@ -1,23 +1,29 @@
-
-
 import React from 'react';
-import BaseInput from '../base.input/base.input';
-import EmailInput from '../email.input/email.input';
-import PasswordInput from '../password.input/password.input';
-import type { UnifiedInputProps } from './input.factory.props';
+import {
+  BaseInput,
+  EmailInput,
+  PasswordInput,
+  TelephoneInput,
+  TcknoInput,
+} from '..';
+import type { UnifiedInputProps } from './InputFactoryProps';
 
-
-const Input = (props: UnifiedInputProps) => {
+const InputFactory = (props: UnifiedInputProps) => {
   switch (props.kind) {
     case 'email':
       return <EmailInput {...props} />;
     case 'password':
       return <PasswordInput {...props} />;
+    case 'telephone':
+      return <TelephoneInput {...props} />;
+    case 'tckno':
+      return <TcknoInput {...props} />;
     case 'base':
     default:
-      return <BaseInput {...props} />;
+      return (
+        <BaseInput {...props} placeholderKey={props.placeholderKey ?? ''} />
+      );
   }
-  
 };
 
-export default Input;
+export default InputFactory;

@@ -1,4 +1,3 @@
-// src/shared/theme/colors.ts
 const colors = {
   // Ana renkler
   primary: '#FFC824',
@@ -24,6 +23,7 @@ const colors = {
   // Çizgiler & sınırlar
   border: '#E0E0E0',
   radioshadow: '#82DEF3',
+  forum: '#EAEFF0',
 };
 
 export default colors;

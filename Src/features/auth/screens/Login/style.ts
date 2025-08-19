@@ -12,7 +12,7 @@ const isTablet = DeviceInfo.isTablet();
 const style = StyleSheet.create({
   ForgotPassOutContainer: {
     width: wp(100),
-    height: isTablet ? hp(6) : hp(5),
+    height: isTablet ? hp(6) : hp(3),
     alignItems: 'center',
     justifyContent: 'flex-end',
   },

@@ -1,11 +1,4 @@
-import NavigationBar from './navigationbar/navigationbar';
-import Subtitle from './subtitle/subtitle';
-import { ScreenBackground } from './screenbackground/screenbackground';
-import ResetPassMessage from './resetpassmassage/resetpassmassage';
+import Subtitle from './subtitle/Subtitle';
+import { LoginBackground } from './loginbackground/LoginBackground';
 
-export {
-  NavigationBar,
-  Subtitle,
-  ScreenBackground,
-  ResetPassMessage
-};
+export { Subtitle, LoginBackground };

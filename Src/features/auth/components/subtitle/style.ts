@@ -8,16 +8,16 @@ const isTablet = DeviceInfo.isTablet();
 
 const style = StyleSheet.create({
   SubtitleText: {
-    fontSize: isTablet ? s(17) : s(15),
+    fontSize: isTablet ? s(15) : s(15),
     color: colors.background,
     textAlign: 'center',
     fontWeight: '600',
   },
   Container: {
-    height: isTablet ? wp(10) : wp(12),
+    height: isTablet ? wp(8) : wp(18),
     width: wp(100),
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
 });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
 import styles from './style';
-import { SubtitleProps, SUBTITLE_KEY_BY_TYPE } from './subtitle.props';
+import { SubtitleProps, SUBTITLE_KEY_BY_TYPE } from './SubtitleProps';
 
 const Subtitle: React.FC<SubtitleProps> = ({ type }) => {
   const { t } = useTranslation();

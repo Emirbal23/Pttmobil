@@ -1,11 +1,14 @@
+import React, { useCallback, useState } from 'react';
 import {
   Text,
   View,
   SafeAreaView,
   Image,
   TouchableOpacity,
+  ActivityIndicator,
+  StatusBar,
+  Platform,
 } from 'react-native';
-import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import { useTranslation } from 'react-i18next';
 import images from '@/assets/images';
@@ -14,12 +17,30 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
-import { isTablet } from 'react-native-device-info';
+import DeviceInfo from 'react-native-device-info';
 import type { RootStackParamList } from '@/app/navigation/types';
 import colors from '@/shared/theme/color';
-const Tanıtım = () => {
+import { setIntroSeen } from '@/shared/storage/introSeen';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+const Promotion = () => {
   const { t } = useTranslation();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleContinue = useCallback(async () => {
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      await setIntroSeen();
+      navigation.replace('Login' as never);
+    } catch (e) {
+      setSubmitting(false);
+    }
+  }, [navigation, submitting]);
+
+  const tablet = DeviceInfo.isTablet();
+  const insets = useSafeAreaInsets();
 
   return (
     <LinearGradient
@@ -29,35 +50,71 @@ const Tanıtım = () => {
       locations={[0.6, 1]}
       style={{ flex: 1 }}
     >
-      <SafeAreaView>
+      <StatusBar
+        translucent={false} 
+        backgroundColor="#000" 
+        barStyle={Platform.OS === 'android' ? 'light-content' : 'dark-content'}
+      />
+      <SafeAreaView
+        style={{
+          flex: 1,
+          marginTop:
+            Platform.OS === 'android' ? (StatusBar.currentHeight ?? 0) * 1.5 : 0,
+        }}
+      >
         <View style={styles.TopContainer}>
           <View style={styles.CloseButtonContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-              <icons.Kapatma
-                width={isTablet() ? wp(5) : wp(7)}
-                height={isTablet() ? wp(5) : wp(7)}
+            <TouchableOpacity
+              onPress={handleContinue}
+              disabled={submitting}
+              accessibilityRole="button"
+              accessibilityLabel="Kapat ve devam et"
+              testID="promo-close"
+            >
+              <icons.close
+                width={tablet ? wp(5) : wp(7)}
+                height={tablet ? wp(5) : wp(7)}
               />
             </TouchableOpacity>
           </View>
+
           <View style={styles.TopMassageContainer}>
-            <Text style={styles.TopMassageText}>{t('TanıtımSubtitle')}</Text>
+            <Text style={styles.TopMassageText}>{t('promotionSubtitle')}</Text>
           </View>
         </View>
+
         <View style={styles.ImageContainer}>
           <Image style={styles.Image} source={images.Tanıtım} />
         </View>
+
         <View style={styles.BottomContainer}>
           <View style={styles.BottomPartContainer}>
-            <View style={styles.YellowBar}></View>
+            <View style={styles.YellowBar} />
           </View>
-          <Text style={styles.BottomText}>{t('TanıtımMassage')}</Text>
+
+          <Text style={styles.BottomText}>{t('promotionMassage')}</Text>
+
           <View style={styles.BottomPartContainer}>
-            <View style={styles.YellowBar}></View>
+            <View style={styles.YellowBar} />
           </View>
         </View>
+
+        {submitting && (
+          <View
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              bottom: 24,
+              alignItems: 'center',
+            }}
+          >
+            <ActivityIndicator />
+          </View>
+        )}
       </SafeAreaView>
     </LinearGradient>
   );
 };
 
-export default Tanıtım;
+export default Promotion;

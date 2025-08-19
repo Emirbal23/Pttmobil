@@ -11,23 +11,17 @@ const isTablet = DeviceInfo.isTablet();
 
 const style = StyleSheet.create({
   container: {
-    width: wp(100),
-    height: isTablet ? hp(14) : hp(12),
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
   wrapper: {
     width: isTablet ? wp(70) : wp(85),
     height: isTablet ? hp(12) : hp(10),
   },
-  labelContainer: {
-    height: isTablet ? hp(4.5) : hp(4),
-    justifyContent: 'flex-end',
-    paddingBottom: isTablet ? s(5) : s(10),
-  },
   label: {
     color: colors.background,
-    fontSize: isTablet ? s(12) : s(15),
+    fontSize: isTablet ? s(12) : s(12),
+    marginBottom: isTablet ? s(4) : s(3),
   },
   inputRow: {
     width: isTablet ? wp(70) : wp(85),
@@ -37,6 +31,7 @@ const style = StyleSheet.create({
     borderWidth: isTablet ? s(2) : s(1.5),
     borderColor: colors.textQuaternary,
     borderRadius: isTablet ? s(8) : s(7),
+    backgroundColor: 'white',
   },
   iconContainer: {
     alignContent: 'center',
@@ -47,7 +42,7 @@ const style = StyleSheet.create({
     width: isTablet ? wp(52) : wp(65),
     height: isTablet ? hp('6%') : hp(5.5),
     paddingHorizontal: isTablet ? s(8) : s(5),
-    fontSize: isTablet ? s(12) : s(15),
+    fontSize: isTablet ? s(12) : s(12),
   },
   toggleContainer: {
     width: isTablet ? wp(5) : wp(11),

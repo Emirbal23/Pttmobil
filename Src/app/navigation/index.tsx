@@ -7,6 +7,7 @@ import AppNavigator from './AppNavigator';
 
 const Navigation = () => {
   return (
+    
     <I18nextProvider i18n={i18n}>
       <NavigationContainer>
         <AppNavigator />

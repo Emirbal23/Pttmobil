@@ -1,8 +1,10 @@
 export type RootStackParamList = {
-  Tanitim: undefined;
-  Login: undefined;
-  ForgetPass: undefined;
-  Register: undefined;
+  promotion: undefined;
+  login: undefined;
+  forgotpassword: undefined;
+  forgotpasswordnext: undefined;
+  register: undefined;
+  registernext: undefined;
 };
 
 declare global {
