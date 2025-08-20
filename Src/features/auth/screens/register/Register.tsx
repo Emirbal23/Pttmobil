@@ -32,7 +32,7 @@ const Register: React.FC = () => {
   const { t, navigation, isKeyboardOpen, registerSchema } = useRegister();
 
   return (
-    <ScreenBackground title={t('Register')}>
+    <ScreenBackground variant="detail" title={t('Register')}>
       <KeyboardAwareScrollView
         scrollEnabled={isKeyboardOpen}
         keyboardShouldPersistTaps="handled"

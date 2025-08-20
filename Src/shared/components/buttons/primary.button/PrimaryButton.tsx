@@ -1,4 +1,3 @@
-// /Src/shared/components/buttons/primary.button/primary.button.tsx
 import React, { useMemo } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +15,6 @@ const PrimaryButton = ({
   const navigation = useNavigation<any>();
   const { t } = useTranslation();
 
-  // Metni belirle: label > labelKey (i18n) > boş
   const buttonText = useMemo(() => {
     if (label && label.trim().length > 0) return label;
     if (labelKey && String(labelKey).trim().length > 0) return t(labelKey);

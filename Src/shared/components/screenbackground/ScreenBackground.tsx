@@ -1,12 +1,14 @@
-import { SafeAreaView, View, Platform, StatusBar } from 'react-native';
+import { View, Platform, StatusBar } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 import styles from './style';
-import DetailHeader from '@/shared/components/headers/detail.header/DetailHeader';
+import { DetailHeader, MainHeader } from '@/shared/components/headers';
 
 export const ScreenBackground: React.FC<{
-  title: string;
+  variant: 'detail' | 'main';
+  title?: string;
   children?: React.ReactNode;
-}> = ({ title, children }) => {
+}> = ({ variant, title, children }) => {
   return (
     <View style={styles.BackGround}>
       <StatusBar
@@ -18,10 +20,16 @@ export const ScreenBackground: React.FC<{
         style={{
           flex: 1,
           marginTop:
-            Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0,
+            Platform.OS === 'android'
+              ? (StatusBar.currentHeight ?? 0) * 0.5
+              : 0,
         }}
       >
-        <DetailHeader title={title} />
+        {variant === 'detail' ? (
+          <DetailHeader title={title || ''} />
+        ) : (
+          <MainHeader />
+        )}
         <View style={[{ backgroundColor: 'white', height: '100%' }]}>
           {children}
         </View>

@@ -23,7 +23,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   ForgetPassText: {
-    color: colors.background,
+    color: colors.grey900,
     fontSize: isTablet ? s(10) : s(12),
   },
   BottomTextOutContainer: {
@@ -42,7 +42,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   ContinueWithhoutText: {
-    color: colors.textTertiary,
+    color: colors.primary,
     fontSize: isTablet ? s(12) : s(14),
     fontWeight: '600',
   },
@@ -53,7 +53,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
   },
   RegisterQuestText: {
-    color: colors.textQuaternary,
+    color: colors.grey200,
     fontSize: isTablet ? s(10) : s(13),
     fontWeight: '500',
   },
@@ -64,7 +64,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   RegisterText: {
-    color: colors.textTertiary,
+    color: colors.primary,
     fontSize: isTablet ? s(12) : s(13),
     fontWeight: '600',
   },

@@ -5,4 +5,5 @@ export type AppStackParamList = {
   ForgotPasswordNext: undefined;
   Register: undefined;
   RegisterNext: undefined;
+  MainMenu: undefined;
 };

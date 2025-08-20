@@ -1,29 +1,24 @@
 const colors = {
-  // Ana renkler
-  primary: '#FFC824',
-  secondary: '#FFFFFF',
-  tertiary: '#F65353',
+  //SYSTEM
+  primary: '#3FB6D2',
+  secondary: '#FFC824',
+  white: '#FFFFFF',
+  black: '#111111',
+  grey900: '#223F46',
+  grey800: '#3D585E',
+  grey200: '#A1ADAF',
+  grey100: '#EAEFF0',
 
-  // Metin renkleri
-  textPrimary: '#000000ff',
-  textSecondary: '#3D585E',
-  textTertiary: '#3FB6D2',
-  textQuaternary: '#A1ADAF',
+  //SEMANTIC
+  success: '#3FB618',
+  danger: '#F65353',
+  warning: '#ff7518',
+  info: '#3FB6D2',
 
-  // Durum renkleri
-  success: '#28a745',
-  error: '#dc3545',
-  warning: '#ff9800',
-  info: '#17a2b8',
 
-  // Arka plan renkleri
-  background: '#223F46',
-  cardBackground: '#FFFFFF',
-
-  // Çizgiler & sınırlar
+  //SPACIAL
   border: '#E0E0E0',
   radioshadow: '#82DEF3',
-  forum: '#EAEFF0',
 };
 
 export default colors;

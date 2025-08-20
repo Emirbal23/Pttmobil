@@ -17,7 +17,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   Forum: {
-    backgroundColor: colors.forum,
+    backgroundColor: colors.grey100,
     width: isTablet ? wp(70) : wp(90),
     height: '100%',
     borderRadius: isTablet ? s(16) : s(10),

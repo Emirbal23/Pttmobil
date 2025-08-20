@@ -1,4 +1,2 @@
-import Subtitle from './subtitle/Subtitle';
-import { LoginBackground } from './loginbackground/LoginBackground';
-
-export { Subtitle, LoginBackground };
+export { default as Subtitle } from './subtitle/Subtitle';
+export { LoginBackground } from './loginbackground/LoginBackground';

@@ -4,13 +4,13 @@ import type {
   GestureResponderEvent,
 } from 'react-native';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
+export type ButtonVariant = 'primary' ;
 
 export interface BaseButtonProps
   extends Omit<TouchableOpacityProps, 'onPress'> {
   label?: string;
-  labelKey?: string; 
-  title?: string; 
+  labelKey?: string;
+  title?: string;
 
   onPress?: (event?: GestureResponderEvent) => void;
   loading?: boolean;

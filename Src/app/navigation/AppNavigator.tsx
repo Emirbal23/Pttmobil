@@ -3,7 +3,6 @@ import { ActivityIndicator, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AppStackParamList } from '@/types/navigation';
 
-
 import {
   Promotion,
   Login,
@@ -12,6 +11,7 @@ import {
   Register,
   RegisterNext,
 } from '@/features/auth';
+import { MainMenu } from '@/features/main';
 import { getIntroSeen } from '@/shared/storage/introSeen';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -45,7 +45,7 @@ function AppNavigator() {
   return (
     <Stack.Navigator
       key={introSeen ? 'seen' : 'not-seen'}
-      initialRouteName={introSeen ? 'Login' : 'Promotion'}
+      initialRouteName={introSeen ? 'MainMenu' : 'Promotion'}
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen
@@ -62,6 +62,7 @@ function AppNavigator() {
       <Stack.Screen name="ForgotPasswordNext" component={ForgotPasswordNext} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="RegisterNext" component={RegisterNext} />
+      <Stack.Screen name="MainMenu" component={MainMenu} />
     </Stack.Navigator>
   );
 }

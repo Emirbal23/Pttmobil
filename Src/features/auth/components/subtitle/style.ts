@@ -9,7 +9,7 @@ const isTablet = DeviceInfo.isTablet();
 const style = StyleSheet.create({
   SubtitleText: {
     fontSize: isTablet ? s(15) : s(15),
-    color: colors.background,
+    color: colors.grey900,
     textAlign: 'center',
     fontWeight: '600',
   },

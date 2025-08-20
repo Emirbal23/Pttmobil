@@ -5,6 +5,7 @@ export type RootStackParamList = {
   forgotpasswordnext: undefined;
   register: undefined;
   registernext: undefined;
+  mainmenu: undefined;
 };
 
 declare global {

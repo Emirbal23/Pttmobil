@@ -11,7 +11,7 @@ const isTablet = DeviceInfo.isTablet();
 
 export default StyleSheet.create({
   BackGround: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.grey900,
     flex: 1,
   },
   Container: {
@@ -35,7 +35,7 @@ export default StyleSheet.create({
   WhiteContainer: {
     position: 'absolute',
     top: isTablet ? hp(26) : hp(25),
-    backgroundColor: colors.cardBackground,
+    backgroundColor: colors.white,
     height: isTablet ? hp(90) : hp(90),
     width: wp(100),
     borderTopLeftRadius: isTablet ? wp(5) : wp(7),

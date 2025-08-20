@@ -11,7 +11,7 @@ const isTablet = DeviceInfo.isTablet();
 
 export default StyleSheet.create({
   BackGround: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.grey900,
     flex: 1,
   },
 });

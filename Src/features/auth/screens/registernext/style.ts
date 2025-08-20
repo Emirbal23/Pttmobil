@@ -16,7 +16,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   Forum: {
-    backgroundColor: colors.forum,
+    backgroundColor: colors.grey100,
     width: isTablet ? wp(70) : wp(90),
     height: '100%',
     borderRadius: isTablet ? s(16) : s(10),
@@ -55,10 +55,10 @@ const style = StyleSheet.create({
     height: '85%',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: isTablet ? s(6) : s(5),
+    borderRadius: isTablet ? s(6) : s(2),
   },
   checkboxinner: {
-    backgroundColor: colors.textTertiary,
+    backgroundColor: colors.primary,
     width: '65%',
     height: '65%',
     borderRadius: isTablet ? s(6) : s(2),

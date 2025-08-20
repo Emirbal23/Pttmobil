@@ -17,13 +17,13 @@ const style = StyleSheet.create({
   Button: {
     width: isTablet ? wp(70) : wp(85),
     height: isTablet ? hp(7) : hp(6),
-    backgroundColor: colors.textTertiary,
+    backgroundColor: colors.primary,
     borderRadius: isTablet ? s(10) : s(12),
     alignItems: 'center',
     justifyContent: 'center',
   },
   ButtonText: {
-    color: colors.secondary,
+    color: colors.white,
     fontSize: isTablet ? s(12) : s(15),
   },
   ErrorText: {},

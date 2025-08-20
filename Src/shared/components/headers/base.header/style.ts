@@ -32,14 +32,14 @@ const style = StyleSheet.create({
     width: isTablet ? wp(75) : wp(60),
   },
   LanguageText: {
-    color: colors.secondary,
+    color: colors.white,
     fontSize: isTablet ? s(16) : s(15),
     fontWeight: '400',
   },
   HorizantalArrow: {
     width: wp(100),
     height: isTablet ? hp(0.2) : hp(0.3),
-    backgroundColor: colors.textTertiary,
+    backgroundColor: colors.primary,
     marginTop: isTablet ? s(2) : s(2),
   },
 
@@ -52,7 +52,7 @@ const style = StyleSheet.create({
     paddingHorizontal: isTablet ? s(24) : s(24),
     paddingTop: isTablet ? s(10) : s(8),
     paddingBottom: isTablet ? s(10) : s(55),
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.white,
   },
   languageOption: {
     flexDirection: 'row',
@@ -74,7 +74,7 @@ const style = StyleSheet.create({
     width: isTablet ? s(20) : s(20),
     borderRadius: isTablet ? s(11) : s(10),
     borderWidth: s(2),
-    borderColor: colors.textSecondary,
+    borderColor: colors.grey800,
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: isTablet ? s(14) : s(12),
@@ -88,14 +88,14 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   radioInnershadow: {
-    backgroundColor: colors.textTertiary,
+    backgroundColor: colors.primary,
     height: isTablet ? s(8) : s(8),
     width: isTablet ? s(8) : s(8),
     borderRadius: isTablet ? s(15) : s(15),
   },
   languageText: {
     fontSize: isTablet ? s(14) : s(13),
-    color: colors.textPrimary,
+    color: colors.black,
     fontWeight: '500',
   },
   animatedview: {
@@ -106,7 +106,7 @@ const style = StyleSheet.create({
   titleText: {
     fontSize: isTablet ? s(18) : s(16),
     fontWeight: '600',
-    color: colors.secondary,
+    color: colors.white,
   },
 });
 

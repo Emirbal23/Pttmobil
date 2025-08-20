@@ -51,7 +51,7 @@ const RegisterNext: React.FC = () => {
   );
 
   return (
-    <ScreenBackground title={t('Register')}>
+    <ScreenBackground variant="detail" title={t('Register')}>
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         bottomOffset={80}
@@ -159,10 +159,10 @@ const RegisterNext: React.FC = () => {
                         styles.checkboxborder,
                         {
                           borderColor: showKvkkError
-                            ? colors.error
+                            ? colors.danger
                             : checkedKvkk
-                            ? colors.textTertiary
-                            : colors.textQuaternary,
+                            ? colors.primary
+                            : colors.grey200,
                         },
                       ]}
                     >
@@ -187,10 +187,10 @@ const RegisterNext: React.FC = () => {
                         styles.checkboxborder,
                         {
                           borderColor: showTermsError
-                            ? colors.error
+                            ? colors.danger
                             : checkedTerms
-                            ? colors.textTertiary
-                            : colors.textQuaternary,
+                            ? colors.primary
+                            : colors.grey200,
                         },
                       ]}
                     >
@@ -203,7 +203,7 @@ const RegisterNext: React.FC = () => {
                     <View style={styles.marginleft}>
                       <Text style={styles.fonts}>
                         <Text
-                          style={{ color: colors.textTertiary }}
+                          style={{ color: colors.primary }}
                           onPress={() => {
                             /* optional: navigate to KVKK page */
                           }}

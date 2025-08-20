@@ -18,7 +18,7 @@ const style = StyleSheet.create({
   },
   MassageText: {
     fontSize: isTablet ? s(10) : s(12),
-    color: colors.textSecondary,
+    color: colors.grey800,
     textAlign: 'center',
   },
 });

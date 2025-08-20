@@ -34,8 +34,9 @@ const BaseInput = forwardRef<RNTextInput, BaseInputProps>((props, ref) => {
         {!!labelKey && <Text style={styles.label}>{t(labelKey)}</Text>}
         <View
           style={[
-            styles.inputRow,  containerStyle,
-            errorText && { borderColor: colors.tertiary },
+            styles.inputRow,
+            containerStyle,
+            errorText && { borderColor: colors.danger },
           ]}
         >
           <View style={styles.iconContainer}>
@@ -51,7 +52,9 @@ const BaseInput = forwardRef<RNTextInput, BaseInputProps>((props, ref) => {
             accessibilityHint={
               errorText
                 ? `${t(placeholderKey ?? '')}. ${errorText}`
-                : (placeholderKey ? t(placeholderKey) : undefined)
+                : placeholderKey
+                ? t(placeholderKey)
+                : undefined
             }
             accessibilityState={{ disabled: !editable }}
             editable={editable}

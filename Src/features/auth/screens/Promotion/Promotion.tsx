@@ -2,13 +2,14 @@ import React, { useCallback, useState } from 'react';
 import {
   Text,
   View,
-  SafeAreaView,
   Image,
   TouchableOpacity,
   ActivityIndicator,
   StatusBar,
   Platform,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import LinearGradient from 'react-native-linear-gradient';
 import { useTranslation } from 'react-i18next';
 import images from '@/assets/images';
@@ -44,22 +45,24 @@ const Promotion = () => {
 
   return (
     <LinearGradient
-      colors={[colors.primary, colors.secondary]}
+      colors={[colors.secondary, colors.white]}
       start={{ x: 0, y: 0 }}
       end={{ x: 0, y: 1 }}
       locations={[0.6, 1]}
       style={{ flex: 1 }}
     >
       <StatusBar
-        translucent={false} 
-        backgroundColor="#000" 
+        translucent={false}
+        backgroundColor="#000"
         barStyle={Platform.OS === 'android' ? 'light-content' : 'dark-content'}
       />
       <SafeAreaView
         style={{
           flex: 1,
           marginTop:
-            Platform.OS === 'android' ? (StatusBar.currentHeight ?? 0) * 1.5 : 0,
+            Platform.OS === 'android'
+              ? (StatusBar.currentHeight ?? 0) * 1.5
+              : 0,
         }}
       >
         <View style={styles.TopContainer}>

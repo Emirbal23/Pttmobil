@@ -28,7 +28,7 @@ const style = StyleSheet.create({
   },
   TopMassageText: {
     fontSize: isTablet ? moderateScale(22) : moderateScale(19),
-    color: colors.background,
+    color: colors.grey900,
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -55,14 +55,14 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   YellowBar: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
     width: isTablet ? wp(40) : wp(50),
     height: hp(0.5),
     borderRadius: wp(100),
   },
   BottomText: {
     fontSize: isTablet ? moderateScale(15) : moderateScale(16),
-    color: colors.textPrimary,
+    color: colors.black,
     textAlign: 'center',
   },
 });

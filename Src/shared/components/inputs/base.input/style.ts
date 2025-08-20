@@ -19,7 +19,7 @@ const style = StyleSheet.create({
     height: isTablet ? hp(12) : hp(10),
   },
   label: {
-    color: colors.background,
+    color: colors.grey900,
     fontSize: isTablet ? s(12) : s(12),
     marginBottom: isTablet ? s(4) : s(3),
   },
@@ -29,7 +29,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: isTablet ? s(2) : s(1.5),
-    borderColor: colors.textQuaternary,
+    borderColor: colors.grey200,
     borderRadius: isTablet ? s(8) : s(7),
     backgroundColor: 'white',
   },
@@ -58,7 +58,7 @@ const style = StyleSheet.create({
   errorText: {
     marginTop: isTablet ? s(0.5) : s(3),
     fontSize: isTablet ? s(8) : s(10),
-    color: colors.error,
+    color: colors.danger,
   },
 });
 

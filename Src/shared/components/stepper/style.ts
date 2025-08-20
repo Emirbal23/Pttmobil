@@ -19,7 +19,7 @@ export default StyleSheet.create({
   Container: {
     width: isTablet ? wp(85) : wp(90),
     height: isTablet ? hp(35) : hp(5.5),
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
     paddingHorizontal: isTablet ? s(12) : s(12),
     borderRadius: s(10),
     flexDirection: 'row',
@@ -34,7 +34,7 @@ export default StyleSheet.create({
   },
   Text: {
     fontWeight: '500',
-    color: colors.textTertiary,
+    color: colors.primary,
     fontSize: isTablet ? s(18) : s(18),
   },
 });

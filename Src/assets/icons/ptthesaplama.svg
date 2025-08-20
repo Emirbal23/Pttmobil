@@ -1,0 +1,28 @@
+<svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="5.06738" y="5.5675" width="20.909" height="23.8968" rx="1.25" stroke="white" stroke-width="1.5"/>
+<rect x="9.54919" y="8.55542" width="11.9454" height="4.47572" rx="1.25" stroke="white" stroke-width="1.5"/>
+<mask id="path-3-inside-1_2027_414" fill="white">
+<rect x="8.79919" y="16.7689" width="2.98786" height="2.98786" rx="1"/>
+</mask>
+<rect x="8.79919" y="16.7689" width="2.98786" height="2.98786" rx="1" fill="black" stroke="white" stroke-width="2.98786" mask="url(#path-3-inside-1_2027_414)"/>
+<mask id="path-4-inside-2_2027_414" fill="white">
+<rect x="8.79919" y="21.9977" width="2.98786" height="2.98786" rx="1"/>
+</mask>
+<rect x="8.79919" y="21.9977" width="2.98786" height="2.98786" rx="1" fill="black" stroke="white" stroke-width="2.98786" mask="url(#path-4-inside-2_2027_414)"/>
+<mask id="path-5-inside-3_2027_414" fill="white">
+<rect x="14.028" y="16.7689" width="2.98786" height="2.98786" rx="1"/>
+</mask>
+<rect x="14.028" y="16.7689" width="2.98786" height="2.98786" rx="1" fill="black" stroke="white" stroke-width="2.98786" mask="url(#path-5-inside-3_2027_414)"/>
+<mask id="path-6-inside-4_2027_414" fill="white">
+<rect x="14.028" y="21.9977" width="2.98786" height="2.98786" rx="1"/>
+</mask>
+<rect x="14.028" y="21.9977" width="2.98786" height="2.98786" rx="1" fill="black" stroke="white" stroke-width="2.98786" mask="url(#path-6-inside-4_2027_414)"/>
+<mask id="path-7-inside-5_2027_414" fill="white">
+<rect x="19.2567" y="16.7689" width="2.98786" height="2.98786" rx="1"/>
+</mask>
+<rect x="19.2567" y="16.7689" width="2.98786" height="2.98786" rx="1" fill="black" stroke="white" stroke-width="2.98786" mask="url(#path-7-inside-5_2027_414)"/>
+<mask id="path-8-inside-6_2027_414" fill="white">
+<rect x="19.2567" y="21.9977" width="2.98786" height="2.98786" rx="1"/>
+</mask>
+<rect x="19.2567" y="21.9977" width="2.98786" height="2.98786" rx="1" fill="black" stroke="white" stroke-width="2.98786" mask="url(#path-8-inside-6_2027_414)"/>
+</svg>

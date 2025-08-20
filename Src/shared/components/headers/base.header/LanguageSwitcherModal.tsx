@@ -12,7 +12,7 @@ import Animated, {
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import icons from '@/assets/icons';
 import colors from '@/shared/theme/color';
-import styles from './style'; 
+import styles from './style';
 const LANGUAGE_STORAGE_KEY = 'userLanguage';
 
 interface LanguageSwitcherModalProps {
@@ -136,7 +136,7 @@ const LanguageSwitcherModal: React.FC<LanguageSwitcherModalProps> = ({
             <View
               style={[
                 styles.radioOuter,
-                currentLang === 'tr' && { borderColor: colors.textTertiary },
+                currentLang === 'tr' && { borderColor: colors.primary },
               ]}
             >
               {currentLang === 'tr' && (
@@ -159,7 +159,7 @@ const LanguageSwitcherModal: React.FC<LanguageSwitcherModalProps> = ({
             <View
               style={[
                 styles.radioOuter,
-                currentLang === 'en' && { borderColor: colors.textTertiary },
+                currentLang === 'en' && { borderColor: colors.primary },
               ]}
             >
               {currentLang === 'en' && (

@@ -11,7 +11,7 @@ const isTablet = DeviceInfo.isTablet();
 
 const style = StyleSheet.create({
   WelcomeText: {
-    color: colors.secondary,
+    color: colors.white,
     fontSize: isTablet ? s(14) : s(18),
     fontWeight: 'bold',
     marginBottom: isTablet ? s(40) : s(50),
@@ -25,11 +25,11 @@ const style = StyleSheet.create({
   },
   MassageText: {
     fontSize: isTablet ? s(12) : s(13),
-    color: colors.textSecondary,
+    color: colors.grey800,
     textAlign: 'center',
   },
   backtologinText: {
-    color: colors.textTertiary,
+    color: colors.primary,
     fontSize: s(15),
     fontWeight: '600',
   },

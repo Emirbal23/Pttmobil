@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './style';
 import type { LoginBackgroundProps } from './LoginBackgoundProps';
 import images from '@/assets/images';
-import LoginHeader from '@/shared/components/headers/login.header/LoginHeader';
+import { LoginHeader } from '@/shared/components/headers';
 export const LoginBackground: React.FC<LoginBackgroundProps> = ({
   children,
   containerStyle,
@@ -24,7 +24,9 @@ export const LoginBackground: React.FC<LoginBackgroundProps> = ({
         style={{
           flex: 1,
           marginTop:
-            Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0,
+            Platform.OS === 'android'
+              ? (StatusBar.currentHeight ?? 0) * 0.5
+              : 0,
         }}
       >
         <LoginHeader />

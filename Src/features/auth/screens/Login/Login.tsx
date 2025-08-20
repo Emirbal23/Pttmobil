@@ -25,7 +25,7 @@ const Login = () => {
         <Formik
           initialValues={{ email: '', password: '' }}
           validationSchema={loginSchema}
-          onSubmit={() => navigation.navigate('ForgotPassword')}
+          onSubmit={() => navigation.navigate('MainMenu')}
         >
           {({
             values,
