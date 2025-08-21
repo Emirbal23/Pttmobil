@@ -1,6 +1,7 @@
 {
   "welcome": "PTT Mobil'e Hoşgeldiniz",
   "language-abstractions": "TR",
+  "welcometxt":"Hoşgeldiniz",
 
   "login": "Giriş Yap",
   "emailholder": "E-posta adresinizi giriniz",
@@ -66,13 +67,28 @@
 
   "passwordResetSuccess": "Şifreniz başarıyla sıfırlandı.",
   "successTitle": "Başarılı",
-  "read":"okudum",
-  "accept":"onaylıyorum",
+  "read": "okudum",
+  "accept": "onaylıyorum",
+
+  "En Yakın PTT": "En Yakın PTT",
+  "Gönderi Hesapla": "Gönderi Hesapla",
+  "Posta Kodu": "Posta Kodu",
+  "Hızlı Kargo Takibi": "Hızlı Kargo Takibi",
+  "Filatelik Ürünler": "Filatelik Ürünler",
+  "Kargomat": "Kargomat",
+  "Kargo": "Kargo",
+  "Telgraf": "Telgraf",
+  "Filateli": "Filateli",
+  "Bize Ulaşın": "Bize Ulaşın",
+  "Hakkımızda": "Hakkımızda",
 
   "membershipAgreement": "Üyelik ve satış sözleşmesini onaylıyorum.",
   "kvkk": "Kişisel Verilerin Korunması Kanunu (KVKK)",
   "forgotScreenMassage": "Lütfen e-postanızı doğrulayın. E-postanıza yeni\n şifre belirlemeniz için bir bağlantı göndereceğiz.",
   "forgotScreenMassage2": "E-postanıza gelen aktivasyon kodunu giriniz ve \n yeni bir şifre oluşturunuz.",
+  "followUs": "Sosyal medya \n hesaplarımızı takip edin",
+
+
 
   "promotionSubtitle": "PTT UYGULAMALARI\nARTIK TEK ÇATI ALTINDA !",
   "promotionMassage": "PTT Kargo, Filateli, Telgraf ve Kargomat\n uygulamaları artıktek uygulamada birleşti.\n Kargo takibi, telgraf gönderme, filatelik\n ürün satın alma, kargomat işlemleri gibi bir\nçok işlem tek uygulamada hizmetinizde."

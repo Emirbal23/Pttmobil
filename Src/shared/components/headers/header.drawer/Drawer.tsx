@@ -67,9 +67,10 @@ const Drawer: React.FC<DrawerProps> = ({
           sideRadii,
           // panel dış pozisyon ayarı
           {
-            top: Platform.OS === 'android'
-              ? (-(StatusBar.currentHeight ?? 0) * 0.5)
-              : 0,
+            top:
+              Platform.OS === 'android'
+                ? -(StatusBar.currentHeight ?? 0) * 0.5
+                : 0,
             bottom: 0,
           },
           // safe-area paddings inside the panel

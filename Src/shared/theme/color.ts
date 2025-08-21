@@ -13,7 +13,6 @@ const colors = {
   success: '#3FB618',
   danger: '#F65353',
   warning: '#ff7518',
-  info: '#3FB6D2',
 
 
   //SPACIAL

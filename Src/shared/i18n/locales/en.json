@@ -1,6 +1,7 @@
 {
   "welcome": "Welcome to PTT Mobil",
   "language-abstractions": "EN",
+  "welcometxt": "Welcome",
 
   "login": "Login",
   "emailholder": "Enter your email address",
@@ -71,8 +72,21 @@
   "membershipAgreement": "I agree to the membership and sales contract.",
   "kvkk": "Personal Data Protection Law (KVKK)",
   "read": "I have read",
-  "accept":"I accept",
+  "accept": "I accept",
 
+  "En Yakın PTT": "Nearest PTT",
+  "Gönderi Hesapla": "Calculate Shipment",
+  "Posta Kodu": "Postal Code",
+  "Hızlı Kargo Takibi": "Quick Cargo Tracking",
+  "Filatelik Ürünler": "Philatelic Products",
+  "Kargomat": "Cargomat",
+  "Kargo": "Cargo",
+  "Telgraf": "Telegraph",
+  "Filateli": "Philately",
+  "Bize Ulaşın": "Contact ",
+  "Hakkımızda": "About ",
+
+  "followUs": "Follow our\n social media accounts",
   "promotionSubtitle": "PTT APPLICATIONS\nNOW UNDER ONE ROOF!",
   "promotionMassage": "PTT Cargo, Philately, Telegraph and Kargomat\n applications are now combined in a single app.\n Cargo tracking, sending telegraphs, purchasing\n philatelic products, Kargomat transactions and many more services are now available in one application."
 }

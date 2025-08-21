@@ -31,6 +31,7 @@ import instagram from './instagram.svg';
 import facebook from './facebook.svg';
 import pttuserwhite from './pttuserwhite.svg';
 import pttanasayfablack from './pttanasayfablack.svg';
+import pttmenulinefliphorizantal from './pttmenulinefliphorizontal.svg';
 
 const icons = {
   close,
@@ -66,6 +67,7 @@ const icons = {
   instagram,
   pttuserwhite,
   pttanasayfablack,
+  pttmenulinefliphorizantal,
 };
 
 export default icons;

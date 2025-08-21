@@ -19,7 +19,11 @@ const MainHeader: React.FC = () => {
         onPressRight={() => {}}
       />
       <Drawer side="left" visible={open} onClose={() => setOpen(false)}>
-        <DrawerContent editable={true} fullName="Emirhan BAL" />
+        <DrawerContent
+          honorific="Sayın"
+          editable={true}
+          fullName="Emirhan BAL"
+        />
       </Drawer>
     </>
   );

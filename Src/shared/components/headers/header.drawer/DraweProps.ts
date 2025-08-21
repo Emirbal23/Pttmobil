@@ -6,6 +6,7 @@ export type DrawerContentProps = {
   avatar?: React.ReactNode;
   fullName?: string;
   editable?: boolean;
+  honorific?: string; 
 };
 export type DrawerSubItem = {
   key: string;
@@ -86,11 +87,10 @@ export const useDrawerMenu = () => {
         label: 'Kargomat',
         IconLeft: icons.pttkargomatwhite,
         children: [
-          { key: 'km1', label: 'En Yakın Kargomat' },
-          { key: 'km2', label: 'Paket Bırak' },
-          { key: 'km3', label: 'Paket Al' },
-          { key: 'km4', label: 'Çalışma Saatleri' },
-          { key: 'km5', label: 'SSS' },
+          { key: 'km1', label: 'Kargomat Gönderileri' },
+          { key: 'km2', label: 'En Yakın Kargomat' },
+          { key: 'km3', label: 'Kargomat Hakkında' },
+          { key: 'km4', label: 'Nasıl Kullanırım' },
         ],
       },
       {
@@ -98,26 +98,18 @@ export const useDrawerMenu = () => {
         label: 'Bize Ulaşın',
         IconLeft: icons.pttcalling,
         color: colors.grey200,
-        children: [
-          { key: 'i1', label: 'İletişim Formu' },
-          { key: 'i2', label: 'Çağrı Merkezi' },
-          { key: 'i3', label: 'Canlı Destek' },
-          { key: 'i4', label: 'Mağazalar' },
-          { key: 'i5', label: 'Geri Bildirim' },
-        ],
+        onPress: () => {
+          console.log('İletişim sayfasına git');
+        },
       },
       {
         key: 'hakkimizda',
         label: 'Hakkımızda',
         IconLeft: icons.ptthelp,
         color: colors.grey200,
-        children: [
-          { key: 'h1', label: 'Misyon' },
-          { key: 'h2', label: 'Vizyon' },
-          { key: 'h3', label: 'Tarihçe' },
-          { key: 'h4', label: 'Ekibimiz' },
-          { key: 'h5', label: 'Basın' },
-        ],
+        onPress: () => {
+          console.log('Hakkımızda sayfasına git');
+        },
       },
     ],
     [],

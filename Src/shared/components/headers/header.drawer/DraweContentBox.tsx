@@ -5,6 +5,7 @@ import icons from '@/assets/icons';
 import colors from '@/shared/theme/color';
 import { DrawerMenuItem } from './DraweProps';
 import { contentStyles } from './styles';
+import { t } from 'i18next';
 
 export const AccordionItem: React.FC<{ item: DrawerMenuItem }> = ({ item }) => {
   const [expanded, setExpanded] = React.useState(!!item.initiallyExpanded);
@@ -41,7 +42,7 @@ export const AccordionItem: React.FC<{ item: DrawerMenuItem }> = ({ item }) => {
               disabled && contentStyles.menuLabelDisabled,
             ]}
           >
-            {item.label}
+            {t(item.label)}
           </Text>
         </View>
         {/* Right chevron toggles up/down if expandable */}
@@ -50,16 +51,7 @@ export const AccordionItem: React.FC<{ item: DrawerMenuItem }> = ({ item }) => {
             expanded ? (
               icons?.pttarrowdown ? (
                 <icons.pttarrowdown width={s(35)} height={s(35)} />
-              ) : (
-                <Text
-                  style={[
-                    contentStyles.chev,
-                    disabled && contentStyles.chevDisabled,
-                  ]}
-                >
-                  ˅
-                </Text>
-              )
+              ) : null
             ) : icons?.gobackwhite ? (
               <icons.gobackwhite width={s(15)} height={s(15)} />
             ) : (

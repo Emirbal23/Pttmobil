@@ -3,12 +3,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 import styles from './style';
 import { DetailHeader, MainHeader } from '@/shared/components/headers';
+import colors from '@/shared/theme/color';
 
 export const ScreenBackground: React.FC<{
   variant: 'detail' | 'main';
   title?: string;
+  rightIcon?: boolean;
   children?: React.ReactNode;
-}> = ({ variant, title, children }) => {
+}> = ({ variant, title, rightIcon, children }) => {
   return (
     <View style={styles.BackGround}>
       <StatusBar
@@ -26,11 +28,11 @@ export const ScreenBackground: React.FC<{
         }}
       >
         {variant === 'detail' ? (
-          <DetailHeader title={title || ''} />
+          <DetailHeader rightIcon={rightIcon} title={title || ''} />
         ) : (
           <MainHeader />
         )}
-        <View style={[{ backgroundColor: 'white', height: '100%' }]}>
+        <View style={[{ backgroundColor: colors.white, height: '100%' }]}>
           {children}
         </View>
       </SafeAreaView>

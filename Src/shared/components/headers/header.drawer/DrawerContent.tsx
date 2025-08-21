@@ -5,11 +5,13 @@ import icons from '@/assets/icons';
 import { useDrawerMenu, DrawerContentProps } from './DraweProps';
 import { AccordionItem } from './DraweContentBox';
 import { contentStyles } from './styles';
+import { t } from 'i18next';
 
 export const DrawerContent: React.FC<DrawerContentProps> = ({
   avatar,
-  fullName = '',
+  fullName = t('welcometxt'),
   editable = false,
+  honorific = t('login'),
 }) => {
   const { items } = useDrawerMenu();
 
@@ -35,15 +37,11 @@ export const DrawerContent: React.FC<DrawerContentProps> = ({
               activeOpacity={0.5}
               style={[contentStyles.editBadge]}
             >
-              {icons?.pttduzenle ? (
-                <icons.pttduzenle width={s(16)} height={s(16)} />
-              ) : (
-                <Text style={{ color: '#0B7E97', fontSize: s(12) }}>✎</Text>
-              )}
+              <icons.pttduzenle width={s(16)} height={s(16)} />
             </TouchableOpacity>
           )}
         </View>
-        <Text style={contentStyles.honorific}>{'Sayın'}</Text>
+        <Text style={contentStyles.honorific}>{honorific}</Text>
         {fullName ? (
           <Text style={contentStyles.fullName}>{fullName}</Text>
         ) : null}
@@ -58,9 +56,7 @@ export const DrawerContent: React.FC<DrawerContentProps> = ({
 
       {/* Social Footer */}
       <View style={contentStyles.footer}>
-        <Text style={contentStyles.followText}>
-          Sosyal medya {'\n'} hesaplarımızı takip edin
-        </Text>
+        <Text style={contentStyles.followText}>{t('followUs')}</Text>
         <View style={contentStyles.socialRow}>
           <TouchableOpacity>
             <icons.facebook width={s(30)} height={s(30)} />

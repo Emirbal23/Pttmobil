@@ -2397,6 +2397,34 @@ PODS:
     - React-perflogger (= 0.81.0)
     - React-utils (= 0.81.0)
     - SocketRocket
+  - RNBootSplash (6.3.10):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
   - RNCAsyncStorage (2.2.0):
     - boost
     - DoubleConversion
@@ -2547,7 +2575,7 @@ PODS:
     - RNWorklets
     - SocketRocket
     - Yoga
-  - RNScreens (4.14.1):
+  - RNScreens (4.15.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -2574,10 +2602,10 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNScreens/common (= 4.14.1)
+    - RNScreens/common (= 4.15.1)
     - SocketRocket
     - Yoga
-  - RNScreens/common (4.14.1):
+  - RNScreens/common (4.15.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -2828,6 +2856,7 @@ DEPENDENCIES:
   - ReactAppDependencyProvider (from `build/generated/ios`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
@@ -2992,6 +3021,8 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNBootSplash:
+    :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNDeviceInfo:
@@ -3084,16 +3115,17 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: c91900fa724baee992f01c05eeb4c9e01a807f78
   ReactCodegen: a55799cae416c387aeaae3aabc1bc0289ac19cee
   ReactCommon: 116d6ee71679243698620d8cd9a9042541e44aa6
+  RNBootSplash: a3179e35cb328629176b7891e1ef1fb9ef364fc3
   RNCAsyncStorage: 29f0230e1a25f36c20b05f65e2eb8958d6526e82
   RNDeviceInfo: d863506092aef7e7af3a1c350c913d867d795047
   RNGestureHandler: 3a73f098d74712952870e948b3d9cf7b6cae9961
   RNReanimated: ee96d03fe3713993a30cc205522792b4cb08e4f9
-  RNScreens: 6ced6ae8a526512a6eef6e28c2286e1fc2d378c3
+  RNScreens: 0147dda2df66f7b70296645347e1fced1d59defb
   RNSVG: 6f39605a4c4d200b11435c35bd077553c6b5963a
   RNWorklets: e8335dff9d27004709f58316985769040cd1e8f2
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 00013dd9cde63a2d98e8002fcc4f5ddb66c10782
 
-PODFILE CHECKSUM: 2a4110554f50ce8c1cc9fa021b330cb3478044f0
+PODFILE CHECKSUM: 85d0cbb429b42f0eae05c32dcc4aa70badc6c112
 
 COCOAPODS: 1.16.2

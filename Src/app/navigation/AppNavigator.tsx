@@ -10,8 +10,8 @@ import {
   ForgotPasswordNext,
   Register,
   RegisterNext,
-} from '@/features/auth';
-import { MainMenu } from '@/features/main';
+} from '@/modules/auth';
+import { MainMenu } from '@/modules/main';
 import { getIntroSeen } from '@/shared/storage/introSeen';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -45,7 +45,7 @@ function AppNavigator() {
   return (
     <Stack.Navigator
       key={introSeen ? 'seen' : 'not-seen'}
-      initialRouteName={introSeen ? 'MainMenu' : 'Promotion'}
+      initialRouteName={introSeen ? 'Login' : 'Promotion'}
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen

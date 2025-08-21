@@ -94,7 +94,7 @@ export const contentStyles = StyleSheet.create({
     gap: s(10),
   },
   menuLabel: {
-    color: 'white',
+    color: colors.white,
     fontSize: s(14),
     fontWeight: '600',
   },
@@ -102,9 +102,8 @@ export const contentStyles = StyleSheet.create({
     color: '#E9EEF0',
   },
   chev: {
-    color: 'white',
-    fontSize: s(22),
-    marginRight: s(2),
+    color: colors.white,
+    fontSize: s(25),
   },
   chevDisabled: {
     color: '#F2F4F5',
@@ -115,7 +114,7 @@ export const contentStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   fallbackIcon: {
-    color: 'white',
+    color: colors.white,
     fontSize: s(12),
   },
   footer: {
