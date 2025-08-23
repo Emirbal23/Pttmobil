@@ -15,17 +15,17 @@ export const useEmailValidation = () => {
   const validateText = useCallback(
     (value?: string): string | undefined => {
       const text = value?.trim() ?? '';
-      if (text.length === 0) return t('emailerror');
-      if (!isValidEmail(text)) return t('emailerrormassage');
+      if (text.length === 0) return t('ui.emailerror');
+      if (!isValidEmail(text)) return t('ui.emailerrormassage');
       return undefined;
     },
-    [t]
+    [t],
   );
 
   // Dil değiştiğinde hata mesajını da güncelle
   useEffect(() => {
     if (error) {
-      setError((prev) => (prev ? validateText(undefined) : undefined));
+      setError(prev => (prev ? validateText(undefined) : undefined));
     }
   }, [i18n.language]);
 
@@ -35,7 +35,7 @@ export const useEmailValidation = () => {
       if (error) setError(undefined);
       return text;
     },
-    [error]
+    [error],
   );
 
   const handleEndEditingEvent = useCallback(
@@ -45,17 +45,20 @@ export const useEmailValidation = () => {
       setError(nextErr);
       return nextErr;
     },
-    [validateText]
+    [validateText],
   );
 
   const handleBlurEvent = useCallback(
     (e: NativeSyntheticEvent<TextInputFocusEventData> | string) => {
-      const text = typeof e === 'string' ? e : (e as any)?.nativeEvent?.text;
+      const text =
+        typeof e === 'string'
+          ? e
+          : ('nativeEvent' in e ? (e.nativeEvent as TextInputFocusEventData).text ?? '' : '');
       const nextErr = validateText(text);
       setError(nextErr);
       return nextErr;
     },
-    [validateText]
+    [validateText],
   );
 
   return {

@@ -1,11 +1,11 @@
 export type AuthSubtitleType = 'login' | 'forgot' | 'verificationSubtitle';
 
 export interface SubtitleProps {
-  type: AuthSubtitleType; 
+  type: AuthSubtitleType;
 }
 
 export const SUBTITLE_KEY_BY_TYPE: Record<AuthSubtitleType, string> = {
-  login: 'login',
-  forgot: 'forgot',
-  verificationSubtitle: 'verificationSubtitle',
+  login: 'ui.login',
+  forgot: 'ui.forgot',
+  verificationSubtitle: 'ui.verificationSubtitle',
 };

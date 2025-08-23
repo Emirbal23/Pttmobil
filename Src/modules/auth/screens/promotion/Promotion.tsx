@@ -82,7 +82,9 @@ const Promotion = () => {
           </View>
 
           <View style={styles.TopMassageContainer}>
-            <Text style={styles.TopMassageText}>{t('promotionSubtitle')}</Text>
+            <Text style={styles.TopMassageText}>
+              {t('ui.promotionSubtitle')}
+            </Text>
           </View>
         </View>
 
@@ -95,7 +97,7 @@ const Promotion = () => {
             <View style={styles.YellowBar} />
           </View>
 
-          <Text style={styles.BottomText}>{t('promotionMassage')}</Text>
+          <Text style={styles.BottomText}>{t('ui.promotionMassage')}</Text>
 
           <View style={styles.BottomPartContainer}>
             <View style={styles.YellowBar} />

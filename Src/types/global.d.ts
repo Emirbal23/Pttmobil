@@ -1,5 +1,3 @@
-// Src/types/global.d.ts
-
 declare module '*.svg' {
   import React from 'react';
   import { SvgProps } from 'react-native-svg';
@@ -10,13 +8,11 @@ declare module '*.png' {
   const value: number;
   export default value;
 }
-
 declare module '*.jpg' {
   const value: number;
   export default value;
 }
-
 declare module '*.json' {
-  const value: any;
+  const value: Record<string, unknown>;
   export default value;
 }

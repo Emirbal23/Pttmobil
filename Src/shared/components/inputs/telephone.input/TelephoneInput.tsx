@@ -30,18 +30,23 @@ const TelephoneInput = forwardRef<RNTextInput, TelephoneInputProps>(
       handleFocus,
       handleEndEditing,
       localError,
-    } = useTelephoneFormatting({ value, onChangeText, defaultCountryTR, validateOnEnd });
+    } = useTelephoneFormatting({
+      value,
+      onChangeText,
+      defaultCountryTR,
+      validateOnEnd,
+    });
 
     const maxLen = 19;
 
     return (
       <BaseInput
         ref={ref}
-        labelKey={labelKey || ('phonesubtitle' as any)}
-        placeholderKey={placeholderKey || ('phoneholder' as any)}
+        labelKey={labelKey ?? 'ui.phonesubtitle'}
+        placeholderKey={placeholderKey ?? 'ui.phoneholder'}
         keyboardType="phone-pad"
         inputMode="numeric"
-        textContentType={"telephoneNumber" as TextInputProps['textContentType']}
+        textContentType={'telephoneNumber' as TextInputProps['textContentType']}
         maxLength={maxLen}
         autoCorrect={false}
         autoComplete={'tel'}

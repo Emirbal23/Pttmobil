@@ -11,7 +11,29 @@ import {
   Register,
   RegisterNext,
 } from '@/modules/auth';
-import { MainMenu } from '@/modules/main';
+import {
+  MainMenu,
+  Contact,
+  Profile,
+  About,
+  EnYakinPtt,
+  GonderiHesapla,
+  PostaKodu,
+} from '@/modules/main';
+import { BireyselOnKabul, BireyselSiparis, KargoTakip } from '@/modules/cargo';
+import {
+  EnYakinKargomat,
+  KargomatGonderileri,
+  KargomatHakkinda,
+  NasilKullanirim,
+} from '@/modules/cargomat';
+import {
+  AldigimUrunler,
+  DahaFazla,
+  Duyurular,
+  FilatelikUrunler,
+} from '@/modules/philately';
+import { DahaFazlaTelgraf, TelgrafIslemleri } from '@/modules/telegraph';
 import { getIntroSeen } from '@/shared/storage/introSeen';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -62,7 +84,33 @@ function AppNavigator() {
       <Stack.Screen name="ForgotPasswordNext" component={ForgotPasswordNext} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="RegisterNext" component={RegisterNext} />
-      <Stack.Screen name="MainMenu" component={MainMenu} />
+      <Stack.Screen
+        name="MainMenu"
+        component={MainMenu}
+        options={{ gestureEnabled: false, headerBackVisible: false }}
+      />
+      <Stack.Screen name="Contact" component={Contact} />
+      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="About" component={About} />
+      <Stack.Screen name="BireyselSiparis" component={BireyselSiparis} />
+      <Stack.Screen name="BireyselOnKabul" component={BireyselOnKabul} />
+      <Stack.Screen name="KargoTakip" component={KargoTakip} />
+      <Stack.Screen name="EnYakinPtt" component={EnYakinPtt} />
+      <Stack.Screen name="PostaKodu" component={PostaKodu} />
+      <Stack.Screen name="GonderiHesapla" component={GonderiHesapla} />
+      <Stack.Screen name="EnYakinKargomat" component={EnYakinKargomat} />
+      <Stack.Screen
+        name="KargomatGonderileri"
+        component={KargomatGonderileri}
+      />
+      <Stack.Screen name="KargomatHakkinda" component={KargomatHakkinda} />
+      <Stack.Screen name="NasilKullanirim" component={NasilKullanirim} />
+      <Stack.Screen name="AldigimUrunler" component={AldigimUrunler} />
+      <Stack.Screen name="DahaFazla" component={DahaFazla} />
+      <Stack.Screen name="Duyurular" component={Duyurular} />
+      <Stack.Screen name="FilatelikUrunler" component={FilatelikUrunler} />
+      <Stack.Screen name="TelgrafIslemleri" component={TelgrafIslemleri} />
+      <Stack.Screen name="DahaFazlaTelgraf" component={DahaFazlaTelgraf} />
     </Stack.Navigator>
   );
 }

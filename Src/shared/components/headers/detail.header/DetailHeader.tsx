@@ -5,14 +5,15 @@ import BaseHeader from '../base.header/BaseHeader';
 import icons from '@/assets/icons';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import { useTranslation } from 'react-i18next';
-import { Drawer, DrawerContent } from '../header.drawer';
+import { Drawer, DrawerContent } from '../../drawer';
 
 interface DetailHeaderProps {
   title: string;
   rightIcon?: boolean;
+  leftOnPress?: () => void;
 }
 
-const DetailHeader: React.FC<DetailHeaderProps> = ({ title, rightIcon }) => {
+const DetailHeader: React.FC<DetailHeaderProps> = ({ title, rightIcon, leftOnPress }) => {
   const [open, setOpen] = useState(false);
   const navigation = useNavigation<StackNavigationProp<any>>();
   return (
@@ -23,7 +24,7 @@ const DetailHeader: React.FC<DetailHeaderProps> = ({ title, rightIcon }) => {
         leftIcon={<icons.gobackwhite width={wp(7)} height={wp(6)} />}
         rightIcon={rightIcon ? <icons.pttmenulinefliphorizantal /> : null}
         onPressRight={() => setOpen(true)}
-        onPressLeft={() => navigation.goBack()}
+        onPressLeft={leftOnPress ? leftOnPress : () => navigation.goBack()}
         showLanguageSwitch={false}
       />
       <Drawer side="right" visible={open} onClose={() => setOpen(false)}>

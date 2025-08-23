@@ -9,16 +9,12 @@ const TcknoInput: React.FC<TcknoInputProps> = ({
   requiredLength = 11,
   validateOnEnd = true,
   errorText,
-  placeholderKey = 'TCKNOholder',
-  labelKey = 'TCKNO',
+  placeholderKey = 'ui.TCKNOholder',
+  labelKey = 'ui.TCKNO',
   ...rest
 }) => {
-  const {
-    error,
-    handleChangeText,
-    handleBlurEvent,
-    handleEndEditingEvent,
-  } = useTcknoValidation(requiredLength);
+  const { error, handleChangeText, handleBlurEvent, handleEndEditingEvent } =
+    useTcknoValidation(requiredLength);
 
   return (
     <BaseInput
@@ -28,7 +24,7 @@ const TcknoInput: React.FC<TcknoInputProps> = ({
       keyboardType="number-pad"
       inputMode="numeric"
       maxLength={requiredLength}
-      onChangeText={(txt) => {
+      onChangeText={txt => {
         const digits = handleChangeText(txt);
         onChangeText?.(digits);
       }}

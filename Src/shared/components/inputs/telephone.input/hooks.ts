@@ -44,9 +44,20 @@ function formatDisplay(input: string): { display: string; rawDigits: string } {
   return { display, rawDigits: capped };
 }
 
-function getTextFromEvent(e: any): string {
+type EndOrFocusEvent =
+  | NativeSyntheticEvent<TextInputEndEditingEventData>
+  | NativeSyntheticEvent<TextInputFocusEventData>
+  | string
+  | undefined
+  | null;
+
+function getTextFromEvent(e: EndOrFocusEvent): string {
   if (typeof e === 'string') return e;
-  return e?.nativeEvent?.text ?? '';
+  if (!e) return '';
+  // TextInputEndEditingEventData has `text`; Focus event does not.
+  const endEdit = e as NativeSyntheticEvent<TextInputEndEditingEventData>;
+  const maybeText = endEdit.nativeEvent && (endEdit.nativeEvent as TextInputEndEditingEventData).text;
+  return typeof maybeText === 'string' ? maybeText : '';
 }
 
 export const useTelephoneFormatting = ({
@@ -102,8 +113,8 @@ export const useTelephoneFormatting = ({
       const raw = formatDisplay(inputText || '').rawDigits;
       // Accept both 10-digit local or 12-digit with cc '90'
       const normalized = raw.startsWith('90') ? `+${raw}` : raw;
-      if (!raw) return t('phoneerror');
-      if (!isPhoneNumber(normalized)) return t('phoneinvalid');
+      if (!raw) return t('ui.phoneerror');
+      if (!isPhoneNumber(normalized)) return t('ui.phoneinvalid');
       return undefined;
     },
     [t],

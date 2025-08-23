@@ -16,7 +16,7 @@ export const usePasswordValidation = (mode: PasswordMode = 'login') => {
   const [visible, setVisible] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
-  const toggleVisible = useCallback(() => setVisible((v) => !v), []);
+  const toggleVisible = useCallback(() => setVisible(v => !v), []);
 
   // Rebuild schema when language or mode changes so messages follow current locale
   const schema = useMemo(() => {
@@ -37,7 +37,7 @@ export const usePasswordValidation = (mode: PasswordMode = 'login') => {
       const text = raw?.trim() ?? '';
 
       if (mode === 'login') {
-        return !text ? t('passworderror') : undefined;
+        return !text ? t('ui.passworderror') : undefined;
       }
 
       try {
@@ -46,7 +46,7 @@ export const usePasswordValidation = (mode: PasswordMode = 'login') => {
       } catch (e) {
         const ve = e as ValidationError;
         // show first error; you can join with ve.errors.join('\n') if needed
-        return ve?.errors?.[0] ?? t('newpassrules');
+        return ve?.errors?.[0] ?? t('ui.newpassrules');
       }
     },
     [mode, schema, t],
@@ -62,7 +62,11 @@ export const usePasswordValidation = (mode: PasswordMode = 'login') => {
   );
 
   const handleBlurEvent = useCallback(
-    (e: NativeSyntheticEvent<TextInputFocusEventData> | { nativeEvent?: { text?: string } }) => {
+    (
+      e:
+        | NativeSyntheticEvent<TextInputFocusEventData>
+        | { nativeEvent?: { text?: string } },
+    ) => {
       const nextErr = validateText((e as any)?.nativeEvent?.text);
       setError(nextErr);
       return nextErr;

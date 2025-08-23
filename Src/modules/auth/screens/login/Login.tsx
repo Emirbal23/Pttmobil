@@ -30,8 +30,6 @@ const Login = () => {
             handleChange,
             handleBlur,
             handleSubmit,
-            isValid,
-            isSubmitting,
           }) => (
             <View style={{ flex: 1 }}>
               <Subtitle type="login" />
@@ -62,16 +60,15 @@ const Login = () => {
                   <TouchableOpacity
                     onPress={() => navigation.navigate('ForgotPassword')}
                   >
-                    <Text style={styles.ForgetPassText}>{t('forgot')}</Text>
+                    <Text style={styles.ForgetPassText}>{t('ui.forgot')}</Text>
                   </TouchableOpacity>
                 </View>
               </View>
 
               <ButtonFactory
                 kind="primary"
-                labelKey="login"
-                onPress={handleSubmit as any}
-                disabled={!isValid || isSubmitting}
+                labelKey="ui.login"
+                onPress={() => handleSubmit()}
                 targetScreen="ForgotPassword"
                 testID="login-submit"
               />
@@ -83,19 +80,21 @@ const Login = () => {
                       onPress={() => navigation.navigate('MainMenu')}
                     >
                       <Text style={styles.ContinueWithhoutText}>
-                        {t('ContinueWithoutLogin')}
+                        {t('ui.ContinueWithoutLogin')}
                       </Text>
                     </TouchableOpacity>
                   </View>
                   <View style={styles.RegisterOutContainer}>
                     <Text style={styles.RegisterQuestText}>
-                      {t('AreYouNotMember')}
+                      {t('ui.AreYouNotMember')}
                     </Text>
                     <View style={styles.RegisterContainer}>
                       <TouchableOpacity
                         onPress={() => navigation.navigate('Register')}
                       >
-                        <Text style={styles.RegisterText}>{t('Register')}</Text>
+                        <Text style={styles.RegisterText}>
+                          {t('ui.Register')}
+                        </Text>
                       </TouchableOpacity>
                     </View>
                   </View>

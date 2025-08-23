@@ -39,7 +39,7 @@ const Register: React.FC = () => {
         bottomOffset={80}
         extraKeyboardSpace={150}
       >
-        <Stepper icon={<icons.stepper />} text={t('personalInformation')} />
+        <Stepper icon={<icons.stepper />} text={t('ui.personalInformation')} />
         <Formik<RegisterValues>
           initialValues={initialValues}
           validationSchema={registerSchema}
@@ -52,8 +52,6 @@ const Register: React.FC = () => {
             handleChange,
             handleBlur,
             handleSubmit,
-            isValid,
-            isSubmitting,
             setFieldError,
           }) => (
             <>
@@ -62,8 +60,8 @@ const Register: React.FC = () => {
                   {/* Ad Soyad */}
                   <InputFactory
                     kind="base"
-                    labelKey="namesurnamesubtitle"
-                    placeholderKey="namesurnameholder"
+                    labelKey="ui.namesurnamesubtitle"
+                    placeholderKey="ui.namesurnameholder"
                     value={values.nameSurname}
                     onChangeText={handleChange('nameSurname')}
                     onBlur={handleBlur('nameSurname')}
@@ -110,10 +108,10 @@ const Register: React.FC = () => {
                           // Formik error'ını anlık set et
                           setFieldError(
                             'confirmPassword',
-                            t('passwordmismatch'),
+                            t('ui.passwordmismatch'),
                           );
                         } else {
-                          setFieldError('confirmPassword', undefined as any);
+                          setFieldError('confirmPassword', undefined as unknown as string);
                         }
                       }
                     }}
@@ -127,20 +125,23 @@ const Register: React.FC = () => {
                   <InputFactory
                     kind="password"
                     mode="newpass"
-                    labelKey="newpassconfirmsubtitle"
-                    placeholderKey="newpassconfirmholder"
+                    labelKey="ui.newpassconfirmsubtitle"
+                    placeholderKey="ui.newpassconfirmholder"
                     value={values.confirmPassword}
                     onChangeText={(text: string) => {
                       handleChange('confirmPassword')(text);
                       if (!text) {
                         setFieldError(
                           'confirmPassword',
-                          t('passwordconfirmerror'),
+                          t('ui.passwordconfirmerror'),
                         );
                       } else if (text !== values.password) {
-                        setFieldError('confirmPassword', t('passwordmismatch'));
+                        setFieldError(
+                          'confirmPassword',
+                          t('ui.passwordmismatch'),
+                        );
                       } else {
-                        setFieldError('confirmPassword', undefined as any);
+                        setFieldError('confirmPassword', undefined as unknown as string);
                       }
                     }}
                     onBlur={handleBlur('confirmPassword')}
@@ -167,9 +168,8 @@ const Register: React.FC = () => {
 
               <ButtonFactory
                 kind="primary"
-                labelKey="continue"
-                onPress={handleSubmit as any}
-                disabled={!isValid || isSubmitting}
+                labelKey="ui.continue"
+                onPress={() => handleSubmit()}
               />
             </>
           )}

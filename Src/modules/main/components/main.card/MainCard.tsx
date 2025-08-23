@@ -20,6 +20,8 @@ import {
 } from 'react-native-responsive-screen';
 import { s } from 'react-native-size-matters';
 import { useTranslation } from 'react-i18next';
+import { useNavigation } from '@react-navigation/native';
+
 
 type CardKind = 'Kargo' | 'Kargomat' | 'Filateli' | 'Telgraf';
 
@@ -32,10 +34,10 @@ type MainCardProps = {
 };
 
 const kindLabelKeyMap: Record<CardKind, string> = {
-  Kargo: 'Kargo',
-  Kargomat: 'Kargomat',
-  Filateli: 'Filatelik Ürünler',
-  Telgraf: 'Telgraf',
+  Kargo: 'pages.Kargo.title',
+  Kargomat: 'pages.Kargomat.title',
+  Filateli: 'pages.FilatelikUrunler.title',
+  Telgraf: 'pages.Telgraf.title',
 };
 
 const isTablet = DeviceInfo.isTablet();
@@ -54,29 +56,23 @@ const circleColorMap: Record<CardKind, string> = {
   Telgraf: colors.grey900,
 };
 
-// Safe icon resolution with fallback to pttkargo
-const iconMap: Record<
-  CardKind,
-  React.ComponentType<{ width?: number; height?: number; color?: string }>
-> = {
-  Kargo: (icons as any).pttkargo ?? (icons as any).goback,
-  Kargomat:
-    (icons as any).pttkargomat ??
-    (icons as any).pttkargo ??
-    (icons as any).goback,
-  Filateli:
-    (icons as any).pttfilateli ??
-    (icons as any).pttkargo ??
-    (icons as any).goback,
-  Telgraf:
-    (icons as any).ptttelgraf ??
-    (icons as any).pttkargo ??
-    (icons as any).goback,
+type IconComp = React.ComponentType<{ width?: number; height?: number; color?: string }>;
+const typedIcons = icons as Partial<Record<string, IconComp>>;
+const FallbackIcon: IconComp = () => null;
+
+const iconMap: Record<CardKind, IconComp> = {
+  Kargo: typedIcons.pttkargo ?? FallbackIcon,
+  Kargomat: typedIcons.pttkargomat ?? typedIcons.pttkargo ?? FallbackIcon,
+  Filateli: typedIcons.pttfilateli ?? typedIcons.pttkargo ?? FallbackIcon,
+  Telgraf: typedIcons.ptttelgraf ?? typedIcons.pttkargo ?? FallbackIcon,
 };
+
+const GoBackIcon = typedIcons.goback ?? FallbackIcon;
 
 const MainCard: React.FC<MainCardProps> = memo(
   ({ kind, onPress, containerStyle, height, text }) => {
     const { t } = useTranslation();
+    const navigation = useNavigation();
     const CARD_WIDTH = wp(90);
     const CARD_HEIGHT = height ?? (isTablet ? hp(10.5) : hp(9.2)); // ~75-95 range responsive
     const RING_STROKE = isTablet ? 9 : 8;
@@ -84,6 +80,29 @@ const MainCard: React.FC<MainCardProps> = memo(
     const gradient = gradientMap[kind];
     const Icon = iconMap[kind];
     const displayText = text ?? t(kindLabelKeyMap[kind]);
+
+    const handlePress = () => {
+      if (onPress) {
+        onPress();
+        return;
+      }
+      switch (kind) {
+        case 'Kargo':
+          navigation.navigate('KargoTakip');
+          break;
+        case 'Kargomat':
+          navigation.navigate('KargomatGonderileri');
+          break;
+        case 'Filateli':
+          navigation.navigate('FilatelikUrunler');
+          break;
+        case 'Telgraf':
+          navigation.navigate('TelgrafIslemleri');
+          break;
+        default:
+          break;
+      }
+    };
 
     // Position rings so only elegant arcs appear on the left side
     const cx = -CARD_HEIGHT * -1.2; // move center slightly left off-canvas
@@ -95,7 +114,7 @@ const MainCard: React.FC<MainCardProps> = memo(
     return (
       <View style={[styles.root, containerStyle]}>
         <Pressable
-          onPress={onPress}
+          onPress={handlePress}
           android_ripple={{ color: '#00000010' }}
           style={({ pressed }) => [
             styles.card,
@@ -124,7 +143,7 @@ const MainCard: React.FC<MainCardProps> = memo(
                 stroke={circleColorMap[kind]}
                 strokeWidth={RING_STROKE}
                 fill="none"
-                strokeDasharray={dash as any}
+                strokeDasharray={dash as number[]}
                 strokeLinecap="butt"
                 opacity={0.35}
               />
@@ -135,7 +154,7 @@ const MainCard: React.FC<MainCardProps> = memo(
                 stroke={circleColorMap[kind]}
                 strokeWidth={RING_STROKE}
                 fill="none"
-                strokeDasharray={dash as any}
+                strokeDasharray={dash as number[]}
                 strokeLinecap="butt"
                 opacity={0.35}
               />
@@ -146,7 +165,7 @@ const MainCard: React.FC<MainCardProps> = memo(
                 stroke={circleColorMap[kind]}
                 strokeWidth={RING_STROKE}
                 fill="none"
-                strokeDasharray={dash as any}
+                strokeDasharray={dash as number[]}
                 strokeLinecap="butt"
                 opacity={0.35}
               />
@@ -177,10 +196,10 @@ const MainCard: React.FC<MainCardProps> = memo(
                   kind === 'Filateli' || kind === 'Telgraf'
                     ? colors.white
                     : colors.grey900,
-                fontWeight: Platform.select({
+                fontWeight: Platform.select<'600' | '700'>({
                   ios: '600',
                   android: '700',
-                }) as any,
+                }),
                 fontSize: s(isTablet ? 13 : 12),
                 marginTop: s(4),
               }}
@@ -232,7 +251,7 @@ const MainCard: React.FC<MainCardProps> = memo(
                 borderBottomLeftRadius: s(20),
               }}
             />
-            <icons.goback
+            <GoBackIcon
               width={s(isTablet ? 42 : 40)}
               height={s(isTablet ? 42 : 40)}
             />

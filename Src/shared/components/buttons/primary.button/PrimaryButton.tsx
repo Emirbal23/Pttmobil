@@ -12,7 +12,7 @@ const PrimaryButton = ({
   onPress,
   ...rest
 }: PrimaryButtonProps) => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation();
   const { t } = useTranslation();
 
   const buttonText = useMemo(() => {
@@ -35,8 +35,8 @@ const PrimaryButton = ({
     <BaseButton
       {...rest}
       onPress={handlePress}
-      label={buttonText as any}
-      title={buttonText as any}
+      label={buttonText}
+      title={buttonText}
       accessibilityLabel={buttonText || undefined}
     >
       {buttonText}

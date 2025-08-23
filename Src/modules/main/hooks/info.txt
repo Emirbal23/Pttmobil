@@ -1,0 +1,1 @@
+Ekranlar içindeki Hookslar Burada ortak olarak Toplanıp daha temiz bir yapı yapılabilir zamanım az diye yapamdım. Yapacak olana Bir Tavsiyedir.

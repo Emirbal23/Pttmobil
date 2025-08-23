@@ -1,92 +1,184 @@
 {
-  "welcome": "Welcome to PTT Mobil",
-  "language-abstractions": "EN",
-  "welcometxt": "Welcome",
+  "ui": {
+    "welcome": "Welcome to PTT Mobil",
+    "language-abstractions": "EN",
+    "welcometxt": "Welcome",
 
-  "login": "Login",
-  "emailholder": "Enter your email address",
-  "resetLinkSent": "Password reset link has been successfully sent to your email.",
-  "emailsubtitle": "Email",
-  "emailerrormassage": "Please enter a valid email.",
-  "emailerror": "Email cannot be left blank!",
-  "passworderror": "Password cannot be left blank!",
-  "passsubtitle": "Password",
-  "passholder": "Enter your password",
-  "newpassrules": "Password must be at least 8 characters long.",
-  "newpassrules1": "Password must contain at least 1 uppercase letter.",
-  "newpassrules2": "Password must contain at least 1 lowercase letter.",
-  "newpassrules3": "Password must contain at least 1 number.",
-  "newpassrules4": "Password must contain at least 1 special character.",
-  "passwordmismatch": "Passwords do not match",
-  "passwordconfirmerror": "Password confirmation is required.",
-  "newpasssubtitle": "New Password",
-  "newpassholder": "Enter your new password",
-  "newpassconfirmsubtitle": "Confirm New Password",
-  "newpassconfirmholder": "Enter your password again",
-  "passwordResetSuccess": "Your password has been successfully reset.",
-  "forgotScreenMassage": "Please verify your email. We will send a link\n to your email to set a new password.",
-  "backtologin": "Back to Login",
+    "login": "Login",
+    "emailholder": "Enter your email address",
+    "resetLinkSent": "Password reset link has been successfully sent to your email.",
+    "emailsubtitle": "Email",
+    "emailerrormassage": "Please enter a valid email.",
+    "emailerror": "Email cannot be left blank!",
+    "passworderror": "Password cannot be left blank!",
+    "passsubtitle": "Password",
+    "passholder": "Enter your password",
+    "newpassrules": "Password must be at least 8 characters long.",
+    "newpassrules1": "Password must contain at least 1 uppercase letter.",
+    "newpassrules2": "Password must contain at least 1 lowercase letter.",
+    "newpassrules3": "Password must contain at least 1 number.",
+    "newpassrules4": "Password must contain at least 1 special character.",
+    "passwordmismatch": "Passwords do not match",
+    "passwordconfirmerror": "Password confirmation is required.",
+    "newpasssubtitle": "New Password",
+    "newpassholder": "Enter your new password",
+    "newpassconfirmsubtitle": "Confirm New Password",
+    "newpassconfirmholder": "Enter your password again",
+    "passwordResetSuccess": "Your password has been successfully reset.",
+    "forgotScreenMassage": "Please verify your email. We will send a link\n to your email to set a new password.",
+    "backtologin": "Back to Login",
 
-  "activationCodeLabel": "Activation Code",
-  "activationCodeHolder": "Enter the activation code",
-  "activationCodeError": "Activation code cannot be left blank.",
-  "verify": "Verify",
-  "forgot": "Forgot Password",
-  "resetpass": "Reset Password",
-  "verificationSubtitle": "Verification",
-  "forgotScreenMassage2": "Please enter the activation code sent to your email\n and create a new password.",
-  "aktivasyonsubtitle": "Activation Code",
-  "personalInformation": "Personal Information",
+    "activationCodeLabel": "Activation Code",
+    "activationCodeHolder": "Enter the activation code",
+    "activationCodeError": "Activation code cannot be left blank.",
+    "verify": "Verify",
+    "forgot": "Forgot Password",
+    "resetpass": "Reset Password",
+    "verificationSubtitle": "Verification",
+    "forgotScreenMassage2": "Please enter the activation code sent to your email\n and create a new password.",
+    "aktivasyonsubtitle": "Activation Code",
+    "personalInformation": "Personal Information",
 
-  "namesurnamesubtitle": "Name/Surname",
-  "namesurnameholder": "Enter your name/surname",
-  "TCKNO": "Turkish ID Number",
-  "TCKNOholder": "Enter your Turkish ID Number",
-  "phonesubtitle": "Phone Number",
-  "phoneholder": "Enter your phone number",
-  "tcsubtitle": "Turkish ID Number",
-  "adresssubtitle": "Address",
-  "provincesubtitle": "Province",
-  "districtsubtitle": "District",
-  "countrysubtitle": "Country",
-  "countryholder": "Enter your country",
-  "adressholder": "Enter neighborhood, street, avenue, door number",
-  "provinceholder": "Enter your province",
-  "districtholder": "Enter your district",
-  "adressInformation": "Address Information",
-  "tcknRequired": "TCKNO cannot be left blank",
-  "tcknLengthError": "TCKNO must be {{requiredLength}} digits long",
-  "tcknInvalid": "Please enter a valid TCKNO.",
-  "phoneerror": "Phone number cannot be left blank",
-  "phoneinvalid": "Invalid phone number",
-  "required": "This field is required.",
+    "namesurnamesubtitle": "Name/Surname",
+    "namesurnameholder": "Enter your name/surname",
+    "TCKNO": "Turkish ID Number",
+    "TCKNOholder": "Enter your Turkish ID Number",
+    "phonesubtitle": "Phone Number",
+    "phoneholder": "Enter your phone number",
+    "tcsubtitle": "Turkish ID Number",
+    "adresssubtitle": "Address",
+    "provincesubtitle": "Province",
+    "districtsubtitle": "District",
+    "countrysubtitle": "Country",
+    "countryholder": "Enter your country",
+    "adressholder": "Enter neighborhood, street, avenue, door number",
+    "provinceholder": "Enter your province",
+    "districtholder": "Enter your district",
+    "adressInformation": "Address Information",
+    "tcknRequired": "TCKNO cannot be left blank",
+    "tcknLengthError": "TCKNO must be {{requiredLength}} digits long",
+    "tcknInvalid": "Please enter a valid TCKNO.",
+    "phoneerror": "Phone number cannot be left blank",
+    "phoneinvalid": "Invalid phone number",
+    "required": "This field is required.",
 
-  "ContinueWithoutLogin": "Continue Without Login",
-  "AreYouNotMember": "Are you not a member?",
-  "Register": "Register",
-  "ok": "OK",
-  "cancel": "Cancel",
-  "continue": "Continue",
-  "successTitle": "Successful",
+    "ContinueWithoutLogin": "Continue Without Login",
+    "AreYouNotMember": "Are you not a member?",
+    "Register": "Register",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "successTitle": "Successful",
 
-  "membershipAgreement": "I agree to the membership and sales contract.",
-  "kvkk": "Personal Data Protection Law (KVKK)",
-  "read": "I have read",
-  "accept": "I accept",
+    "membershipAgreement": "I agree to the membership and sales contract.",
+    "kvkk": "Personal Data Protection Law (KVKK)",
+    "read": "I have read",
+    "accept": "I accept",
 
-  "En Yakın PTT": "Nearest PTT",
-  "Gönderi Hesapla": "Calculate Shipment",
-  "Posta Kodu": "Postal Code",
-  "Hızlı Kargo Takibi": "Quick Cargo Tracking",
-  "Filatelik Ürünler": "Philatelic Products",
-  "Kargomat": "Cargomat",
-  "Kargo": "Cargo",
-  "Telgraf": "Telegraph",
-  "Filateli": "Philately",
-  "Bize Ulaşın": "Contact ",
-  "Hakkımızda": "About ",
+    "followUs": "Follow our\n social media accounts",
+    "promotionSubtitle": "PTT APPLICATIONS\nNOW UNDER ONE ROOF!",
+    "promotionMassage": "PTT Cargo, Philately, Telegraph and Kargomat\n applications are now combined in a single app.\n Cargo tracking, sending telegraphs, purchasing\n philatelic products, Kargomat transactions and many more services are now available in one application.",
 
-  "followUs": "Follow our\n social media accounts",
-  "promotionSubtitle": "PTT APPLICATIONS\nNOW UNDER ONE ROOF!",
-  "promotionMassage": "PTT Cargo, Philately, Telegraph and Kargomat\n applications are now combined in a single app.\n Cargo tracking, sending telegraphs, purchasing\n philatelic products, Kargomat transactions and many more services are now available in one application."
+    "searchTitle": "Search",
+    "searchPagesPlaceholder": "Search pages... (e.g., About, Contact)",
+    "noResults": "No results"
+  },
+  "pages": {
+    "EnYakinPTT": {
+      "title": "Nearest PTT",
+      "keywords": ["near", "nearest", "location", "branch", "map"]
+    },
+    "GonderiHesapla": {
+      "title": "Calculate Shipment",
+      "keywords": [
+        "calculate shipment",
+        "fee",
+        "price",
+        "postal code",
+        "code",
+        "neighborhood",
+        "district"
+      ]
+    },
+    "PostaKodu": {
+      "title": "Postal Code",
+      "keywords": ["postal code", "code"]
+    },
+    "HizliKargoTakibi": {
+      "title": "Quick Cargo Tracking",
+      "keywords": ["cargo", "tracking", "shipment tracking"]
+    },
+    "FilatelikUrunler": {
+      "title": "Philatelic Products",
+      "keywords": ["philately", "stamp", "collection", "products"]
+    },
+    "Kargomat": {
+      "title": "Cargomat",
+      "keywords": ["Cargomat", "locker"]
+    },
+    "Kargo": {
+      "title": "Cargo",
+      "keywords": ["cargo", "shipment"]
+    },
+    "Telgraf": {
+      "title": "Telegraph",
+      "keywords": ["telegraph", "telegram"]
+    },
+    "Filateli": {
+      "title": "Philately",
+      "keywords": ["philately", "stamp", "collection"]
+    },
+    "Iletisim": {
+      "title": "Contact",
+      "keywords": ["contact", "call center", "phone", "email"]
+    },
+    "Hakkimizda": {
+      "title": "About",
+      "keywords": ["about", "corporate", "who we are"]
+    },
+    "KargoTakip": {
+      "title": "Cargo Tracking",
+      "keywords": ["cargo", "tracking", "shipment tracking"]
+    },
+    "BireyselOnKabul": {
+      "title": "Individual Pre-Acceptance",
+      "keywords": ["pre-admission", "individual"]
+    },
+    "BireyselSiparis": {
+      "title": "Individual Order",
+      "keywords": ["order", "individual", "my orders"]
+    },
+    "AldigimUrunler": {
+      "title": "Products I Received",
+      "keywords": ["purchases", "my purchases"]
+    },
+    "Duyurular": {
+      "title": "Announcements",
+      "keywords": ["announcement", "news", "update"]
+    },
+    "NasilKullanirim": {
+      "title": "How Do I Use?",
+      "keywords": ["how", "usage", "help", "guide"]
+    },
+    "DahaFazla": {
+      "title": "More",
+      "keywords": ["more"]
+    },
+    "TelgrafIslemleri": {
+      "title": "Telegraph Transactions",
+      "keywords": ["telegraph", "telegram", "transactions"]
+    },
+    "KargomatGonderileri": {
+      "title": "Cargomat Shipments",
+      "keywords": ["Cargomat", "shipment"]
+    },
+    "EnYakinKargomat": {
+      "title": "Nearest Cargomat",
+      "keywords": ["Cargomat", "nearest", "location"]
+    },
+    "KargomatHakkinda": {
+      "title": "About Cargomat",
+      "keywords": ["Cargomat", "about"]
+    }
+  }
 }

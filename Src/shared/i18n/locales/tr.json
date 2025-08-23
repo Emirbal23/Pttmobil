@@ -1,95 +1,184 @@
 {
-  "welcome": "PTT Mobil'e Hoşgeldiniz",
-  "language-abstractions": "TR",
-  "welcometxt":"Hoşgeldiniz",
+  "ui": {
+    "welcome": "PTT Mobil'e Hoşgeldiniz",
+    "language-abstractions": "TR",
+    "welcometxt": "Hoşgeldiniz",
 
-  "login": "Giriş Yap",
-  "emailholder": "E-posta adresinizi giriniz",
-  "resetLinkSent": "Şifre sıfırlama bağlantısı e-postanıza başarıyla gönderilmiştir",
-  "emailsubtitle": "E-posta",
-  "emailerror": "E-posta boş bırakılamaz!",
-  "emailerrormassage": "Geçerli bir e-posta girin.",
-  "passsubtitle": "Şifre",
-  "passholder": "Şifrenizi giriniz",
-  "passworderror": "Şifre boş bırakılamaz!",
-  "newpassrules": "Şifre en az 8 karakter olmalı",
-  "newpassrules1": "Şifre en az 1 büyük harf içermelidir",
-  "newpassrules2": "Şifre en az 1 küçük harf içermelidir",
-  "newpassrules3": "Şifre en az 1 rakam içermelidir",
-  "newpassrules4": "Şifre en az 1 özel karakter içermelidir",
-  "passwordmismatch": "Şifreler eşleşmiyor",
-  "passwordconfirmerror": "Şifre doğrulama gerekli",
-  "newpasssubtitle": "Yeni Şifre",
-  "newpassholder": "Yeni Şifre",
-  "newpassconfirmsubtitle": "Yeni Şifre Tekrar",
-  "newpassconfirmholder": "Şifrenizi tekrar giriniz",
+    "login": "Giriş Yap",
+    "emailholder": "E-posta adresinizi giriniz",
+    "resetLinkSent": "Şifre sıfırlama bağlantısı e-postanıza başarıyla gönderilmiştir",
+    "emailsubtitle": "E-posta",
+    "emailerrormassage": "Geçerli bir e-posta girin.",
+    "emailerror": "E-posta boş bırakılamaz!",
+    "passworderror": "Şifre boş bırakılamaz!",
+    "passsubtitle": "Şifre",
+    "passholder": "Şifrenizi giriniz",
+    "newpassrules": "Şifre en az 8 karakter olmalı.",
+    "newpassrules1": "Şifre en az 1 büyük harf içermelidir.",
+    "newpassrules2": "Şifre en az 1 küçük harf içermelidir.",
+    "newpassrules3": "Şifre en az 1 rakam içermelidir.",
+    "newpassrules4": "Şifre en az 1 özel karakter içermelidir.",
+    "passwordmismatch": "Şifreler eşleşmiyor",
+    "passwordconfirmerror": "Şifre doğrulama gerekli",
+    "newpasssubtitle": "Yeni Şifre",
+    "newpassholder": "Yeni şifrenizi giriniz",
+    "newpassconfirmsubtitle": "Yeni Şifre Tekrar",
+    "newpassconfirmholder": "Şifrenizi tekrar giriniz",
+    "passwordResetSuccess": "Şifreniz başarıyla sıfırlandı.",
+    "forgotScreenMassage": "Lütfen e-postanızı doğrulayın. E-postanıza yeni\n şifre belirlemeniz için bir bağlantı göndereceğiz.",
+    "backtologin": "Giriş Ekranına Dön",
 
-  "activationCodeLabel": "Aktivasyon Kodu",
-  "activationCodeHolder": "Aktivasyon kodunu giriniz",
-  "activationCodeError": "Aktivasyon kısmı boş bırakılamaz",
-  "verify": "Doğrula",
-  "verificationSubtitle": "Doğrulama",
-  "aktivasyonsubtitle": "Aktivasyon Kodu",
-  "backtologin": "Giriş Ekranına Dön",
-  "personalInformation": "Kişisel Bilgiler",
+    "activationCodeLabel": "Aktivasyon Kodu",
+    "activationCodeHolder": "Aktivasyon kodunu giriniz",
+    "activationCodeError": "Aktivasyon kodu boş bırakılamaz.",
+    "verify": "Doğrula",
+    "forgot": "Şifremi Unuttum",
+    "resetpass": "Şifreyi Sıfırla",
+    "verificationSubtitle": "Doğrulama",
+    "forgotScreenMassage2": "E-postanıza gelen aktivasyon kodunu giriniz ve\n yeni bir şifre oluşturunuz.",
+    "aktivasyonsubtitle": "Aktivasyon Kodu",
+    "personalInformation": "Kişisel Bilgiler",
 
-  "countrysubtitle": "Ülke",
-  "provincesubtitle": "İl",
-  "districtsubtitle": "İlçe",
-  "adresssubtitle": "Adres",
-  "adressholder": "Mahalle, Cadde, Sokak, Kapı no, giriniz",
-  "adressInformation": "Adres Bilgileri",
-  "provinceholder": "İl bilgilerinizi giriniz",
-  "districtholder": "İlçe bilgilerinizi giriniz",
-  "countryholder": "Ülke bilgilerinizi giriniz",
-  "tcsubtitle": "T.C.Kimlik Numarası",
-  "namesurnamesubtitle": "Ad/Soyad",
-  "namesurnameholder": "Ad/Soyad bilgilerinizi giriniz",
-  "required": "Bu alan zorunludur.",
-  "TCKNO": "T.C. Kimlik Numarası",
-  "TCKNOholder": "T.C. Kimlik Numaranızı giriniz",
-  "phonesubtitle": "Telefon Numarası",
-  "phoneholder": "Telefon Numaranızı giriniz",
-  "tcknRequired": "TCKNO boş bırakılamaz",
-  "tcknInvalid": "Geçerli bir TCKNO girin.",
-  "tcknLengthError": "TCKNO {{requiredLength}} haneli olmalı",
-  "phoneerror": "Geçerli bir telefon numarası girin.",
-  "phoneinvalid": "Geçersiz telefon numarası.",
+    "namesurnamesubtitle": "Ad/Soyad",
+    "namesurnameholder": "Ad/Soyad bilgilerinizi giriniz",
+    "TCKNO": "T.C. Kimlik Numarası",
+    "TCKNOholder": "T.C. Kimlik Numaranızı giriniz",
+    "phonesubtitle": "Telefon Numarası",
+    "phoneholder": "Telefon Numaranızı giriniz",
+    "tcsubtitle": "T.C. Kimlik Numarası",
+    "adresssubtitle": "Adres",
+    "provincesubtitle": "İl",
+    "districtsubtitle": "İlçe",
+    "countrysubtitle": "Ülke",
+    "countryholder": "Ülke bilgilerinizi giriniz",
+    "adressholder": "Mahalle, Cadde, Sokak, Kapı no, giriniz",
+    "provinceholder": "İl bilgilerinizi giriniz",
+    "districtholder": "İlçe bilgilerinizi giriniz",
+    "adressInformation": "Adres Bilgileri",
+    "tcknRequired": "TCKNO boş bırakılamaz",
+    "tcknLengthError": "TCKNO {{requiredLength}} haneli olmalı",
+    "tcknInvalid": "Geçerli bir TCKNO girin.",
+    "phoneerror": "Telefon boş bırakılamaz",
+    "phoneinvalid": "Geçersiz telefon numarası.",
+    "required": "Bu alan zorunludur.",
 
-  "forgot": "Şifremi Unuttum",
-  "resetpass": "Şifreyi Sıfırla",
-  "ContinueWithoutLogin": "Üye Olmadan Devam Et",
-  "AreYouNotMember": "Üye Değil misin?",
-  "Register": "Kayıt Ol",
-  "ok": "Tamam",
-  "cancel": "İptal",
-  "continue": "Devam Et",
+    "ContinueWithoutLogin": "Üye Olmadan Devam Et",
+    "AreYouNotMember": "Üye değil misin?",
+    "Register": "Kayıt Ol",
+    "ok": "Tamam",
+    "cancel": "İptal",
+    "continue": "Devam Et",
+    "successTitle": "Başarılı",
 
-  "passwordResetSuccess": "Şifreniz başarıyla sıfırlandı.",
-  "successTitle": "Başarılı",
-  "read": "okudum",
-  "accept": "onaylıyorum",
+    "membershipAgreement": "Üyelik ve satış sözleşmesini onaylıyorum.",
+    "kvkk": "Kişisel Verilerin Korunması Kanunu (KVKK)",
+    "read": "okudum",
+    "accept": "onaylıyorum",
 
-  "En Yakın PTT": "En Yakın PTT",
-  "Gönderi Hesapla": "Gönderi Hesapla",
-  "Posta Kodu": "Posta Kodu",
-  "Hızlı Kargo Takibi": "Hızlı Kargo Takibi",
-  "Filatelik Ürünler": "Filatelik Ürünler",
-  "Kargomat": "Kargomat",
-  "Kargo": "Kargo",
-  "Telgraf": "Telgraf",
-  "Filateli": "Filateli",
-  "Bize Ulaşın": "Bize Ulaşın",
-  "Hakkımızda": "Hakkımızda",
+    "followUs": "Sosyal medya\n hesaplarımızı takip edin",
+    "promotionSubtitle": "PTT UYGULAMALARI\nARTIK TEK ÇATI ALTINDA !",
+    "promotionMassage": "PTT Kargo, Filateli, Telgraf ve Kargomat\n uygulamaları artık tek uygulamada birleşti.\n Kargo takibi, telgraf gönderme, filatelik\n ürün satın alma, kargomat işlemleri gibi bir\nçok işlem tek uygulamada hizmetinizde.",
 
-  "membershipAgreement": "Üyelik ve satış sözleşmesini onaylıyorum.",
-  "kvkk": "Kişisel Verilerin Korunması Kanunu (KVKK)",
-  "forgotScreenMassage": "Lütfen e-postanızı doğrulayın. E-postanıza yeni\n şifre belirlemeniz için bir bağlantı göndereceğiz.",
-  "forgotScreenMassage2": "E-postanıza gelen aktivasyon kodunu giriniz ve \n yeni bir şifre oluşturunuz.",
-  "followUs": "Sosyal medya \n hesaplarımızı takip edin",
-
-
-
-  "promotionSubtitle": "PTT UYGULAMALARI\nARTIK TEK ÇATI ALTINDA !",
-  "promotionMassage": "PTT Kargo, Filateli, Telgraf ve Kargomat\n uygulamaları artıktek uygulamada birleşti.\n Kargo takibi, telgraf gönderme, filatelik\n ürün satın alma, kargomat işlemleri gibi bir\nçok işlem tek uygulamada hizmetinizde."
+    "searchTitle": "Ara",
+    "searchPagesPlaceholder": "Sayfa ara... (örn: Hakkımızda, İletişim)",
+    "noResults": "Sonuç bulunamadı"
+  },
+  "pages": {
+    "EnYakinPTT": {
+      "title": "En Yakın PTT",
+      "keywords": ["yakın", "en yakın", "konum", "şube", "harita"]
+    },
+    "GonderiHesapla": {
+      "title": "Gönderi Hesapla",
+      "keywords": [
+        "gönderi hesapla",
+        "ücret",
+        "fiyat",
+        "posta kodu",
+        "kod",
+        "mahalle",
+        "semt"
+      ]
+    },
+    "PostaKodu": {
+      "title": "Posta Kodu",
+      "keywords": ["posta kodu", "kod"]
+    },
+    "HizliKargoTakibi": {
+      "title": "Hızlı Kargo Takibi",
+      "keywords": ["kargo", "takip", "gönderi takip"]
+    },
+    "FilatelikUrunler": {
+      "title": "Filatelik Ürünler",
+      "keywords": ["filateli", "pul", "koleksiyon", "ürünler"]
+    },
+    "Kargomat": {
+      "title": "Kargomat",
+      "keywords": ["kargomat", "dolap"]
+    },
+    "Kargo": {
+      "title": "Kargo",
+      "keywords": ["kargo", "gönderi"]
+    },
+    "Telgraf": {
+      "title": "Telgraf",
+      "keywords": ["telgraf", "telegram"]
+    },
+    "Filateli": {
+      "title": "Filateli",
+      "keywords": ["filateli", "pul", "koleksiyon"]
+    },
+    "Iletisim": {
+      "title": "İletişim",
+      "keywords": ["iletişim", "çağrı merkezi", "telefon", "e-posta"]
+    },
+    "Hakkimizda": {
+      "title": "Hakkımızda",
+      "keywords": ["hakkımızda", "kurumsal", "biz kimiz"]
+    },
+    "KargoTakip": {
+      "title": "Kargo Takip",
+      "keywords": ["kargo", "takip", "gönderi takip"]
+    },
+    "BireyselOnKabul": {
+      "title": "Bireysel Ön Kabul",
+      "keywords": ["ön kabul", "bireysel"]
+    },
+    "BireyselSiparis": {
+      "title": "Bireysel Sipariş",
+      "keywords": ["sipariş", "bireysel", "siparişlerim"]
+    },
+    "AldigimUrunler": {
+      "title": "Aldığım Ürünler",
+      "keywords": ["satın aldıklarım", "alışverişlerim"]
+    },
+    "Duyurular": {
+      "title": "Duyurular",
+      "keywords": ["duyuru", "haber", "güncelleme"]
+    },
+    "NasilKullanirim": {
+      "title": "Nasıl Kullanırım?",
+      "keywords": ["nasıl", "kullanım", "yardım", "rehber"]
+    },
+    "DahaFazla": {
+      "title": "Daha Fazla",
+      "keywords": ["daha fazla"]
+    },
+    "TelgrafIslemleri": {
+      "title": "Telgraf İşlemleri",
+      "keywords": ["telgraf", "telegram", "işlemler"]
+    },
+    "KargomatGonderileri": {
+      "title": "Kargomat Gönderileri",
+      "keywords": ["kargomat", "gönderi"]
+    },
+    "EnYakinKargomat": {
+      "title": "En Yakın Kargomat",
+      "keywords": ["kargomat", "en yakın", "konum"]
+    },
+    "KargomatHakkinda": {
+      "title": "Kargomat Hakkında",
+      "keywords": ["kargomat", "hakkında"]
+    }
+  }
 }

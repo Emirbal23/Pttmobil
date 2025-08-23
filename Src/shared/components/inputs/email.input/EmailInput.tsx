@@ -12,19 +12,14 @@ import { useEmailValidation } from './hooks';
 const EmailInput: React.FC<EmailInputProps> = ({
   onChangeText,
   onEndEditing,
-  onBlur,
   leftIcon,
   labelKey,
   placeholderKey,
   errorText,
   ...rest
 }) => {
-  const {
-    error,
-    handleChangeText,
-    handleEndEditingEvent,
-    handleBlurEvent,
-  } = useEmailValidation();
+  const { error, handleChangeText, handleEndEditingEvent, handleBlurEvent } =
+    useEmailValidation();
 
   const onChangeTextProxy = (text: string) => {
     handleChangeText(text);
@@ -38,26 +33,23 @@ const EmailInput: React.FC<EmailInputProps> = ({
     onEndEditing?.(e);
   };
 
-  const onBlurProxy = (
-    e: NativeSyntheticEvent<TextInputFocusEventData>,
-  ) => {
-    handleBlurEvent(e);
-    onBlur?.(e);
-  };
-
   return (
     <BaseInput
       {...rest}
-      labelKey={labelKey ?? 'emailsubtitle'}
-      placeholderKey={placeholderKey ?? 'emailholder'}
+      labelKey={labelKey ?? 'ui.emailsubtitle'}
+      placeholderKey={placeholderKey ?? 'ui.emailholder'}
       keyboardType="email-address"
       inputMode="email"
       autoCapitalize="none"
-      leftIcon={leftIcon ?? ((p: any) => <icons.pttuser {...p} />)}
+      leftIcon={
+        leftIcon ??
+        (({ width, height, color }: { width?: number; height?: number; color?: string }) => (
+          <icons.pttuser width={width} height={height} color={color} />
+        ))
+      }
       errorText={errorText ?? error}
       onChangeText={onChangeTextProxy}
       onEndEditing={onEndEditingProxy}
-      onBlur={onBlurProxy}
     />
   );
 };

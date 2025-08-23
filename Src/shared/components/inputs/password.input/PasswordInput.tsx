@@ -1,5 +1,9 @@
 import React from 'react';
-import { TouchableOpacity, NativeSyntheticEvent, TextInputEndEditingEventData } from 'react-native';
+import {
+  TouchableOpacity,
+  NativeSyntheticEvent,
+  TextInputEndEditingEventData,
+} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import { moderateScale as s } from 'react-native-size-matters';
 
@@ -20,8 +24,13 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   errorText,
   ...rest
 }) => {
-  const { visible, toggleVisible, error, handleChangeText, handleEndEditingEvent } =
-    usePasswordValidation(mode);
+  const {
+    visible,
+    toggleVisible,
+    error,
+    handleChangeText,
+    handleEndEditingEvent,
+  } = usePasswordValidation(mode);
 
   const iconSize = {
     width: isTablet ? s(30) : s(24),
@@ -43,13 +52,25 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   return (
     <BaseInput
       {...rest}
-      labelKey={labelKey ?? (mode === 'newpass' || mode === 'register' ? 'newpasssubtitle' : 'passsubtitle')}
-      placeholderKey={placeholderKey ?? (mode === 'newpass' || mode === 'register' ? 'newpassholder' : 'passholder')}
+      labelKey={
+        labelKey ??
+        (mode === 'newpass' || mode === 'register'
+          ? 'ui.newpasssubtitle'
+          : 'ui.passsubtitle')
+      }
+      placeholderKey={
+        placeholderKey ??
+        (mode === 'newpass' || mode === 'register'
+          ? 'ui.newpassholder'
+          : 'ui.passholder')
+      }
       autoCapitalize="none"
       secureTextEntry={!visible}
       leftIcon={
         leftIcon ??
-        ((props: any) => <icons.pttlock width={props.width} height={props.height} />)
+        (({ width, height }: { width?: number; height?: number; color?: string }) => (
+          <icons.pttlock width={width} height={height} />
+        ))
       }
       rightIcon={
         <TouchableOpacity onPress={toggleVisible}>

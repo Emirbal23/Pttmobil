@@ -13,8 +13,10 @@ export const TCKN_DIGITS_REGEX = /^\d{11}$/;
 // Primitive Validators
 // -----------------
 export const isNonEmpty = (v?: string): boolean => !!(v && v.trim().length > 0);
-export const isValidEmail = (email?: string): boolean => !!email && EMAIL_REGEX.test(email.trim());
-export const isPhoneNumber = (phone?: string): boolean => !!phone && PHONE_REGEX.test(phone);
+export const isValidEmail = (email?: string): boolean =>
+  !!email && EMAIL_REGEX.test(email.trim());
+export const isPhoneNumber = (phone?: string): boolean =>
+  !!phone && PHONE_REGEX.test(phone);
 
 // Turkish ID (TCKN) checksum rules
 //  - 11 digits, first digit cannot be 0
@@ -24,7 +26,7 @@ export function isValidTckno(raw?: string): boolean {
   const v = (raw || '').trim();
   if (!TCKN_DIGITS_REGEX.test(v)) return false;
   if (v[0] === '0') return false;
-  const d = v.split('').map((c) => parseInt(c, 10));
+  const d = v.split('').map(c => parseInt(c, 10));
   const oddSum = d[0] + d[2] + d[4] + d[6] + d[8];
   const evenSum = d[1] + d[3] + d[5] + d[7];
   const digit10 = (((oddSum * 7 - evenSum) % 10) + 10) % 10;
@@ -35,8 +37,10 @@ export function isValidTckno(raw?: string): boolean {
 // -----------------
 // Normalizers / Helpers
 // -----------------
-export const normalizePhone = (input: string): string => input.replace(/\D+/g, '');
-export const normalizeTckno = (input: string): string => input.replace(/\D+/g, '').slice(0, 11);
+export const normalizePhone = (input: string): string =>
+  input.replace(/\D+/g, '');
+export const normalizeTckno = (input: string): string =>
+  input.replace(/\D+/g, '').slice(0, 11);
 
 // Convert local TR digits (starting with 90 or local 10) to E.164 (+90XXXXXXXXXX)
 export const toE164TR = (digits: string): string => {
@@ -51,28 +55,38 @@ export const toE164TR = (digits: string): string => {
 // Bu fonksiyonlar her çağrıldığında t(...) güncel dili kullanır.
 // -----------------
 export const getEmailSchema = () =>
-  Yup.string().trim().matches(EMAIL_REGEX, t('emailerrormassage')).required(t('emailerror'));
+  Yup.string()
+    .trim()
+    .matches(EMAIL_REGEX, t('ui.emailerrormassage'))
+    .required(t('ui.emailerror'));
 
 export const getPasswordSchema = () =>
   Yup.string()
-    .required(t('passworderror'))
-    .min(8, t('newpassrules'))
-    .matches(/[A-Z]/, t('newpassrules1'))
-    .matches(/[a-z]/, t('newpassrules2'))
-    .matches(/\d/, t('newpassrules3'))
-    .matches(/[!@#$%^&*(),.?":{}|<>]/, t('newpassrules4'));
+    .required(t('ui.passworderror'))
+    .min(8, t('ui.newpassrules'))
+    .matches(/[A-Z]/, t('ui.newpassrules1'))
+    .matches(/[a-z]/, t('ui.newpassrules2'))
+    .matches(/\d/, t('ui.newpassrules3'))
+    .matches(/[!@#$%^&*(),.?":{}|<>]/, t('ui.newpassrules4'));
 
 export const getPhoneSchema = () =>
-  Yup.string().required(t('phoneerror')).matches(PHONE_REGEX, t('phoneinvalid'));
+  Yup.string()
+    .required(t('ui.phoneerror'))
+    .matches(PHONE_REGEX, t('ui.phoneinvalid'));
 
 // Sadece 11 hane kontrolü default. İstersen checksum testini açabilirsin.
 export const getTcknoSchema = (opts?: { useChecksum?: boolean }) => {
   const useChecksum = opts?.useChecksum ?? false;
   let schema = Yup.string()
-    .required(t('tcknRequired'))
-    .matches(TCKN_DIGITS_REGEX, t('tcknLengthError', { requiredLength: 11 }));
+    .required(t('ui.tcknRequired'))
+    .matches(
+      TCKN_DIGITS_REGEX,
+      t('ui.tcknLengthError', { requiredLength: 11 }),
+    );
   if (useChecksum) {
-    schema = schema.test('tckn-checksum', t('tcknInvalid'), (val) => (val ? isValidTckno(val) : false));
+    schema = schema.test('tckn-checksum', t('ui.tcknInvalid'), val =>
+      val ? isValidTckno(val) : false,
+    );
   }
   return schema;
 };
@@ -81,17 +95,17 @@ export const getTcknoSchema = (opts?: { useChecksum?: boolean }) => {
 export const getLoginSchema = () =>
   Yup.object({
     email: getEmailSchema(),
-    password: Yup.string().trim().required(t('passworderror')),
+    password: Yup.string().trim().required(t('ui.passworderror')),
   });
 
 export const getRegisterSchema = (opts?: { useChecksumForTckn?: boolean }) =>
   Yup.object({
-    nameSurname: Yup.string().trim().required(t('required')),
+    nameSurname: Yup.string().trim().required(t('ui.required')),
     tckno: getTcknoSchema({ useChecksum: !!opts?.useChecksumForTckn }),
     email: getEmailSchema(),
     password: getPasswordSchema(),
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password')], t('passwordmismatch'))
-      .required(t('passwordconfirmerror')),
+      .oneOf([Yup.ref('password')], t('ui.passwordmismatch'))
+      .required(t('ui.passwordconfirmerror')),
     phone: getPhoneSchema(),
   });

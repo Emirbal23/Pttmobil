@@ -9,12 +9,22 @@ import { isValidTckno as checksumValidate } from '@/shared/utils/validator';
 
 export type TcknoHookOptions = {
   requiredLength?: number; // default 11
-  useChecksum?: boolean;   // default false (sadece uzunluk kontrolü)
+  useChecksum?: boolean; // default false (sadece uzunluk kontrolü)
 };
 
-function getTextFromEvent(e: any): string {
+type TcknoInputEvent =
+  | NativeSyntheticEvent<TextInputEndEditingEventData>
+  | NativeSyntheticEvent<TextInputFocusEventData>
+  | string
+  | null
+  | undefined;
+
+function getTextFromEvent(e: TcknoInputEvent): string {
   if (typeof e === 'string') return e;
-  return e?.nativeEvent?.text ?? '';
+  if (!e) return '';
+  const ne = (e as NativeSyntheticEvent<TextInputEndEditingEventData>).nativeEvent;
+  const txt = (ne as TextInputEndEditingEventData).text;
+  return typeof txt === 'string' ? txt : '';
 }
 
 function toDigitsCap(v: string, cap: number) {
@@ -24,7 +34,8 @@ function toDigitsCap(v: string, cap: number) {
 export function useTcknoValidation(optionsOrLen?: number | TcknoHookOptions) {
   // Backward compatible param parsing
   const opts: TcknoHookOptions = useMemo(() => {
-    if (typeof optionsOrLen === 'number') return { requiredLength: optionsOrLen };
+    if (typeof optionsOrLen === 'number')
+      return { requiredLength: optionsOrLen };
     return optionsOrLen ?? {};
   }, [optionsOrLen]);
 
@@ -39,9 +50,10 @@ export function useTcknoValidation(optionsOrLen?: number | TcknoHookOptions) {
   const computeError = useCallback(
     (raw?: string): string | undefined => {
       const value = (raw ?? '').trim();
-      if (!value) return t('tcknRequired');
-      if (value.length !== requiredLength) return t('tcknLengthError', { requiredLength });
-      if (useChecksum && !checksumValidate(value)) return t('tcknInvalid');
+      if (!value) return t('ui.tcknRequired');
+      if (value.length !== requiredLength)
+        return t('ui.tcknLengthError', { requiredLength });
+      if (useChecksum && !checksumValidate(value)) return t('ui.tcknInvalid');
       return undefined;
     },
     [requiredLength, useChecksum, t],

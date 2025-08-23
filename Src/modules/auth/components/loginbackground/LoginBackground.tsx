@@ -35,7 +35,7 @@ export const LoginBackground: React.FC<LoginBackgroundProps> = ({
             source={images.LoginBackground}
             style={[styles.BackGroundContainer, backgroundImageStyle]}
           >
-            <Text style={styles.WelcomeText}>{t('welcome')}</Text>
+            <Text style={styles.WelcomeText}>{t('ui.welcome')}</Text>
           </ImageBackground>
           <View style={[styles.WhiteContainer, containerStyle]}>
             <View style={{ flex: 1 }}>{children}</View>
