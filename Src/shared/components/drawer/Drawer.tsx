@@ -82,11 +82,10 @@ const Drawer: React.FC<DrawerProps> = ({
             side === 'left' ? { left: 0 } : { right: 0 },
             { width: panelWidth },
             sideRadii,
-            // panel dış pozisyon ayarı
             {
               top:
                 Platform.OS === 'android'
-                  ? -(StatusBar.currentHeight ?? 0) * 0.5
+                  ? (StatusBar.currentHeight ?? 0) 
                   : 0,
               bottom: 0,
             },

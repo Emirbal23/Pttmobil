@@ -1,4 +1,3 @@
-// Src/features/auth/screens/login/hooks.ts
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { BackHandler, Keyboard, Platform, ToastAndroid } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';

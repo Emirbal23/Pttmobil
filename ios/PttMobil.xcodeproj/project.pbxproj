@@ -10,9 +10,9 @@
 		0AA9D58A0EDB4BD9942FD34E /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5836477959F74B3AA8A5741F /* BootSplash.storyboard */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2C4D1EB37632457AB22A0611 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB0A3F3282446F39F2B5DB7 /* Colors.xcassets */; };
+		538991717A6BF0CC52E578A8 /* libPods-PttMobil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4E971831DF6A0C6D12EC30 /* libPods-PttMobil.a */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		CEDA0E2C9EB6D1F385103F36 /* libPods-PttMobil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAEE17222712ABAFD0A3D35 /* libPods-PttMobil.a */; };
 		DDD5FEAC7AB79F5FBA1C5419 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -21,14 +21,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PttMobil/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PttMobil/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = PttMobil/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		48D1BAF1920FCB71304ED3BE /* Pods-PttMobil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMobil.release.xcconfig"; path = "Target Support Files/Pods-PttMobil/Pods-PttMobil.release.xcconfig"; sourceTree = "<group>"; };
+		472ABA9CF51EEEF716D21DEE /* Pods-PttMobil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMobil.debug.xcconfig"; path = "Target Support Files/Pods-PttMobil/Pods-PttMobil.debug.xcconfig"; sourceTree = "<group>"; };
+		4F4E971831DF6A0C6D12EC30 /* libPods-PttMobil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PttMobil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5836477959F74B3AA8A5741F /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = PttMobil/BootSplash.storyboard; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PttMobil/AppDelegate.swift; sourceTree = "<group>"; };
-		7AAEE17222712ABAFD0A3D35 /* libPods-PttMobil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PttMobil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PttMobil/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBB0A3F3282446F39F2B5DB7 /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = PttMobil/Colors.xcassets; sourceTree = "<group>"; };
+		E85A2FDB082C3B8D45237859 /* Pods-PttMobil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMobil.release.xcconfig"; path = "Target Support Files/Pods-PttMobil/Pods-PttMobil.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F57C109E1A125410F8347E61 /* Pods-PttMobil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMobil.debug.xcconfig"; path = "Target Support Files/Pods-PttMobil/Pods-PttMobil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDA0E2C9EB6D1F385103F36 /* libPods-PttMobil.a in Frameworks */,
+				538991717A6BF0CC52E578A8 /* libPods-PttMobil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				7AAEE17222712ABAFD0A3D35 /* libPods-PttMobil.a */,
+				4F4E971831DF6A0C6D12EC30 /* libPods-PttMobil.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,8 +98,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F57C109E1A125410F8347E61 /* Pods-PttMobil.debug.xcconfig */,
-				48D1BAF1920FCB71304ED3BE /* Pods-PttMobil.release.xcconfig */,
+				472ABA9CF51EEEF716D21DEE /* Pods-PttMobil.debug.xcconfig */,
+				E85A2FDB082C3B8D45237859 /* Pods-PttMobil.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -111,13 +111,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PttMobil" */;
 			buildPhases = (
-				1CAE6206EEAC5263D9449E98 /* [CP] Check Pods Manifest.lock */,
+				4F9F494C6B5E7CAB83C97040 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				5ED0AD7E61931CCE4AB5B0A6 /* [CP] Embed Pods Frameworks */,
-				330C7565A29CEB63C9FBCEA9 /* [CP] Copy Pods Resources */,
+				EEE84DA283825BD3C351B04A /* [CP] Embed Pods Frameworks */,
+				FF1DBD1BE68D22830FFEDB27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,7 +192,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		1CAE6206EEAC5263D9449E98 /* [CP] Check Pods Manifest.lock */ = {
+		4F9F494C6B5E7CAB83C97040 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,28 +214,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		330C7565A29CEB63C9FBCEA9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5ED0AD7E61931CCE4AB5B0A6 /* [CP] Embed Pods Frameworks */ = {
+		EEE84DA283825BD3C351B04A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -243,17 +222,30 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF1DBD1BE68D22830FFEDB27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PttMobil/Pods-PttMobil-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -272,7 +264,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F57C109E1A125410F8347E61 /* Pods-PttMobil.debug.xcconfig */;
+			baseConfigurationReference = 472ABA9CF51EEEF716D21DEE /* Pods-PttMobil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -300,7 +292,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48D1BAF1920FCB71304ED3BE /* Pods-PttMobil.release.xcconfig */;
+			baseConfigurationReference = E85A2FDB082C3B8D45237859 /* Pods-PttMobil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -395,7 +387,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -466,7 +461,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

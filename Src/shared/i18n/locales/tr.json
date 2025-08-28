@@ -88,6 +88,10 @@
       "title": "En Yakın PTT",
       "keywords": ["yakın", "en yakın", "konum", "şube", "harita"]
     },
+    "Profile": {
+      "title": "Profil",
+      "keywords": ["profil", "kullanıcı", "hesap"]
+    },
     "GonderiHesapla": {
       "title": "Gönderi Hesapla",
       "keywords": [
@@ -138,6 +142,21 @@
     },
     "KargoTakip": {
       "title": "Kargo Takip",
+      "primaryoption": "Gönderi Takip",
+      "secondaryoption": "Arşiv",
+      "singlequery": "Tekil Sorgu",
+      "multiquery": "Çoklu Sorgu",
+      "trackingcode": "Takip Kodu",
+      "trackingcodesingleholder": "Takip Kodunu Giriniz",
+      "history": "Geçmiş Sorgularım",
+      "query": "Sorgula",
+      "addcode": "Kod Ekle",
+      "notfound": "Takip Numarası Bulunamadı",
+      "notfoundsingle": "Takip numarasını eksik veya hatalı bir şekilde doldurdunuz.",
+      "code": "Kod",
+      "again": "Yeniden Dene",
+      "giveup": "Vazgeç",
+      "multinotfound": "Aşağıdaki kodlarda eksik veya hatalı takip numarası var",
       "keywords": ["kargo", "takip", "gönderi takip"]
     },
     "BireyselOnKabul": {

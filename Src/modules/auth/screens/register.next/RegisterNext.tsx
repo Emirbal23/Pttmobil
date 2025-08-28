@@ -51,7 +51,7 @@ const RegisterNext: React.FC = () => {
   );
 
   return (
-    <ScreenBackground variant="detail" title={t('Register')}>
+    <ScreenBackground variant="detail" title={t('ui.Register')}>
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         bottomOffset={80}
@@ -77,12 +77,10 @@ const RegisterNext: React.FC = () => {
           }) => {
             const checkedTerms = !!values.agreeTerms;
             const showTermsError =
-              !!errors.agreeTerms &&
-              (submitCount > 0 || touched.agreeTerms);
+              !!errors.agreeTerms && (submitCount > 0 || touched.agreeTerms);
             const checkedKvkk = !!values.agreeKvkk;
             const showKvkkError =
-              !!errors.agreeKvkk &&
-              (submitCount > 0 || touched.agreeKvkk);
+              !!errors.agreeKvkk && (submitCount > 0 || touched.agreeKvkk);
             return (
               <>
                 <View style={styles.ForumOutContainer}>

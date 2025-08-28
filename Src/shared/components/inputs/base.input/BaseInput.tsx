@@ -47,7 +47,7 @@ const BaseInput = forwardRef<RNTextInput, BaseInputProps>((props, ref) => {
             ref={ref}
             style={[styles.input, inputStyle]}
             placeholder={placeholderKey ? t(placeholderKey) : undefined}
-            placeholderTextColor={colors.grey900}
+            placeholderTextColor={colors.grey200}
             accessible
             accessibilityLabel={labelKey ? t(labelKey) : undefined}
             accessibilityHint={

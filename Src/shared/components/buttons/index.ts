@@ -1,4 +1,3 @@
-// Src/shared/components/buttons/index.ts
 export { default as BaseButton } from './base.button/BaseButton';
 export type { BaseButtonProps } from './base.button/BaseButtonProps';
 

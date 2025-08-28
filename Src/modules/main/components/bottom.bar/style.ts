@@ -23,6 +23,8 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     borderRadius: isTablet ? s(14) : s(10),
+    position: 'absolute',
+    bottom: -wp(12),
   },
   BottomBarOptionContainer: {
     width: isTablet ? s(120) : s(100),

@@ -100,6 +100,10 @@
         "district"
       ]
     },
+    "Profile": {
+      "title": "Profile",
+      "keywords": ["profile", "user", "account"]
+    },
     "PostaKodu": {
       "title": "Postal Code",
       "keywords": ["postal code", "code"]
@@ -138,6 +142,21 @@
     },
     "KargoTakip": {
       "title": "Cargo Tracking",
+      "primaryoption": "Cargo Tracking",
+      "secondaryoption": "Archive",
+      "singlequery": "Single Query",
+      "multiquery": "Multi Query",
+      "trackingcode": "Tracking Code",
+      "trackingcodesingleholder": "Enter Your Tracking Code",
+      "history": "My Past Queries",
+      "query": "Query",
+      "addcode": "Add Code",
+      "notfound": "Tracking Number Not Found",
+      "notfoundsingle": "Tracking Number is missing or incorrectly filled.",
+      "code": "Code",
+      "again": "Try Again",
+      "giveup": "Give Up",
+      "multinotfound": "There are missing or incorrect tracking numbers in the codes below",
       "keywords": ["cargo", "tracking", "shipment tracking"]
     },
     "BireyselOnKabul": {

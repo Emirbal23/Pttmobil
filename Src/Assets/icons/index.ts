@@ -32,6 +32,7 @@ import facebook from './facebook.svg';
 import pttuserwhite from './pttuserwhite.svg';
 import pttanasayfablack from './pttanasayfablack.svg';
 import pttmenulinefliphorizantal from './pttmenulinefliphorizontal.svg';
+import pttarrowright from './pttarrowright.svg';
 
 const icons = {
   close,
@@ -68,6 +69,7 @@ const icons = {
   pttuserwhite,
   pttanasayfablack,
   pttmenulinefliphorizantal,
+  pttarrowright,
 };
 
 export default icons;

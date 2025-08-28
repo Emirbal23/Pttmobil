@@ -1,4 +1,4 @@
-//bu yapının kullanılmasını önermiyorum işlevsel olmadıkları için tasarımlara uygun olması adına geliştirdim güzel gözüküyor fakat işlevli ve kullanılabilir bir yapı değil!
+//bu yapının kullanılmasını önermiyorum işlevsel olmadıkları için tasarımlara uygun olması adına birebir aynı olacak şekilde hiç bişeye dikkat etmeden geliştirdim güzel gözüküyor fakat işlevli, kullanılabilir bir yapı değil!
 //kullanılacak olursa güncellenmesini tavsiye ederim.
 import React, { memo } from 'react';
 import {
@@ -21,7 +21,6 @@ import {
 import { s } from 'react-native-size-matters';
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
-
 
 type CardKind = 'Kargo' | 'Kargomat' | 'Filateli' | 'Telgraf';
 
@@ -56,7 +55,11 @@ const circleColorMap: Record<CardKind, string> = {
   Telgraf: colors.grey900,
 };
 
-type IconComp = React.ComponentType<{ width?: number; height?: number; color?: string }>;
+type IconComp = React.ComponentType<{
+  width?: number;
+  height?: number;
+  color?: string;
+}>;
 const typedIcons = icons as Partial<Record<string, IconComp>>;
 const FallbackIcon: IconComp = () => null;
 
@@ -214,7 +217,7 @@ const MainCard: React.FC<MainCardProps> = memo(
             style={{
               position: 'absolute',
               top: (CARD_HEIGHT - 45) / 2,
-              left: CARD_WIDTH * 0.69, // approx where your 250px was for 90% width
+              left: CARD_WIDTH * 0.695,
               zIndex: 1,
             }}
             width={25}

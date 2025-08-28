@@ -1,4 +1,3 @@
-// Src/shared/components/buttons/button.factory/button.factory.tsx
 import React from 'react';
 import BaseButton from '../base.button/BaseButton';
 import PrimaryButton from '../primary.button/PrimaryButton';

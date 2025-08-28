@@ -14,17 +14,19 @@ const BaseButton = ({
   rightIcon,
   accessibilityLabel,
   testID,
+  buttonStyle,
+  buttoncontainerStyle,
 }: BaseButtonProps) => {
   const buttonText = label ?? (labelKey ? t(labelKey) : '');
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, buttoncontainerStyle]}>
       <TouchableOpacity
         testID={testID}
         accessibilityLabel={accessibilityLabel ?? buttonText}
         accessibilityRole="button"
-        activeOpacity={0.7}
-        style={styles.Button}
+        activeOpacity={0.8}
+        style={[styles.Button, buttonStyle]}
         onPress={onPress}
         disabled={disabled || loading}
       >
