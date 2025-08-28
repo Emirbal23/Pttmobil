@@ -1,97 +1,121 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📦 PTT Mobil – React Native Uygulaması
 
-# Getting Started
+Bu proje, **PTT Mobil uygulamasının** modern bir mimari ve tasarımla yeniden geliştirilmesi amacıyla oluşturulmuştur.  
+Proje, **React Native + TypeScript** altyapısı ile çok dilli (TR/EN) destek, yeniden kullanılabilir bileşenler, modüler yapıda ekranlar ve gelişmiş UI/UX özellikleri sunar.  
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Özellikler
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **Kimlik Doğrulama**  
+  - Giriş yapma, kayıt olma, şifremi unuttum akışları  
+  - 2 adımlı şifre sıfırlama (aktivasyon kodu + yeni şifre ekranı)  
+  - Validasyon & i18n hata mesajları  
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **Çok Dillilik (i18n)**  
+  - JSON formatında uzun vadeli sürdürülebilir dil dosyaları  
+  - Anlık dil değişimi desteği  
+  - TR/EN arasında dinamik geçiş  
 
-```sh
-# Using npm
-npm start
+- **Navigasyon & Drawer**  
+  - **Drawer** yapısı (animasyonlu geçişler)  
+  - **Daha Fazla, Telgraf İşlemleri, Kargomat, Filateli** menüleri için bağlantılar hazır  
 
-# OR using Yarn
-yarn start
+- **Ana Menü & Alt Modüller**  
+  - Ana menü ekranı (MainMenu)  
+  - Alt kısımlarda **Bottom Bar + Main Card** bileşenleri  
+
+- **Search (Arama)**  
+  - SearchOverlay ve SearchOverlayView bileşenleri  
+  - Yazılan dil ile eşleşen kelime algoritması  
+  - %50 harf benzerliği ile gelişmiş filtreleme  
+
+- **Shared Components**  
+  - Ortak kullanılan `Button`, `Input`, `Header` vb. bileşenler  
+  - Tüm sayfalarda tekrar kullanılabilir yapı  
+  - Farklı senaryolara göre özelleştirilmiş varyantlar  
+
+- **UI/UX İyileştirmeleri**  
+  - Splash/Boot ekranı (iOS & Android)  
+  - Yeni uygulama ikonları & launch assetleri  
+  - Responsive tasarım: Tablet & telefon uyumlu  
+
+---
+
+## 📂 Mimari Yapı
+
+- **modules/** → Özellik bazlı ekranlar (Auth, Cargo, Philately, Telegraph, MainMenu, vb.)  
+- **shared/** → Tekrar kullanılabilir bileşenler (Input, Button, Header, Drawer, Search, Hook’lar, vb.)  
+- **assets/** → İkonlar, görseller, svg/png dosyaları  
+- **app/** → Navigation, app.tsx gibi yapılar
+
+---
+
+## ✅ Yapılanlar
+
+- Auth ekranları (Login, Register, Reset Password) tamamlandı.  
+- Drawer ve arama (Search) algoritması yazıldı ve entegre edildi.  
+- MainMenu ekranı tamamlandı.
+- Shared altında reusable component yapısı kuruldu.  
+- i18n altyapısı kuruldu, anlık dil değişimi sağlandı.  
+- Splash, app icon, safe area düzenlemeleri yapıldı.  
+- Navigasyon geçişleri ve bağlantıları tamamlandı.  
+
+---
+
+## ❌ Eksikler
+
+- **Hooks:**  
+  - Her ekranın kendi içinde bulunan hook’lar **hooks/** altında toplanmadı.  
+  - Genel kullanılan hook’lar `shared/hooks` içine taşınmalı.  
+
+- **Kargo Modülü:**  
+  - Başlangıç ekranı yapıldı, fakat eksik kısımlar tamamlanmadı.  
+
+- **Telgraf / Kargomat / Filateli:**  
+  - Navigasyon bağlantıları ve header yapısı hazır, fakat ekran içerikleri tamamen eksik.  
+
+- **Backend Entegrasyonu:**  
+  - Şu an yalnızca frontend mevcut, backend bağlantısı yapılmadı.  
+
+- **MainCard Component:**  
+  - Tasarıma birebir uyması için kod ile yapıldı.  
+  - Daha temiz bir yapı için SVG/PNG varlıkları ile revize edilmeli.  
+
+---
+
+## 💡 Öneriler & İyileştirmeler
+
+- **Kod Organizasyonu:**  
+  - Hooks klasörleri mutlaka ortak yapıya taşınmalı.  
+  - Gereksiz tekrar eden stil ve props’lar sadeleştirilmeli.  
+
+- **UI/UX:**  
+  - MainCard yeniden tasarlanmalı, görsellerle desteklenmeli.  
+  - Eksik modüller tamamlanırken tasarım standardı korunmalı.  
+
+- **Backend:**  
+  - API servisleri için `services/` klasörü oluşturulmalı.  
+  - Axios veya react-query ile data fetch mantığı eklenmeli.  
+
+---
+
+## 🔧 Kurulum & Çalıştırma
+
+```bash
+# Projeyi klonla
+git clone https://github.com/Emirbal23/Pttmobil.git
+cd Pttmobil
+
+# Bağımlılıkları yükle
+npm install
+# veya
+yarn install
+
+# iOS için pod kur
+cd ios && pod install && cd ..
+
+# Uygulamayı başlat
+npx react-native run-android
+npx react-native run-ios
 ```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
