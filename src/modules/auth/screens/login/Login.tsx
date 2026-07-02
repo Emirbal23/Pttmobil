@@ -77,7 +77,9 @@ const Login = () => {
                 <View style={styles.BottomAllTextContainer}>
                   <View style={styles.ContinueWithoutContainer}>
                     <TouchableOpacity
+                      accessibilityLabel="Continue Without Login"
                       onPress={() => navigation.navigate('MainMenu')}
+                      testID="continue-without-login"
                     >
                       <Text style={styles.ContinueWithhoutText}>
                         {t('ui.ContinueWithoutLogin')}
@@ -90,7 +92,9 @@ const Login = () => {
                     </Text>
                     <View style={styles.RegisterContainer}>
                       <TouchableOpacity
+                        accessibilityLabel="Register"
                         onPress={() => navigation.navigate('Register')}
+                        testID="register-link"
                       >
                         <Text style={styles.RegisterText}>
                           {t('ui.Register')}

@@ -1,125 +1,126 @@
 # PTT Mobil Interface Redesign
 
-A React Native + TypeScript mobile interface and architecture study created during my PTT internship. The project is inspired by the real PTT Mobile application experience, but it is not an official replacement for the production PTT Mobile app. It focuses on redesigning selected mobile flows, reusable UI components, navigation structure, localization and frontend maintainability.
+A React Native and TypeScript mobile interface redesign study created during my PTT internship. The project reimagines selected PTT Mobile-style flows with a focus on frontend architecture, reusable UI components, navigation structure, localization, and maintainable mobile screen development.
 
-> Internship project focused on mobile UI architecture, screen design, reusable components and React Native implementation practice.
+> This is not an official PTT application and is not affiliated with or published by PTT. It is a self-developed internship project created for mobile UI/UX and React Native implementation practice.
 
-## Quick Links
+## Project Overview
 
-- Developer: [Emirhan Bal](https://github.com/Emirbal23)
-- LinkedIn: [linkedin.com/in/emirhan-bal-551239253](https://www.linkedin.com/in/emirhan-bal-551239253/)
-- GitHub Profile: [github.com/Emirbal23](https://github.com/Emirbal23)
+The goal of this project is to explore how a large public-service mobile application experience can be organized in a cleaner, modular, and maintainable React Native codebase. It includes authentication screens, a main service menu, drawer navigation, search behavior, cargo-related screens, Kargomat screens, telegraph services, philately flows, and shared UI building blocks.
 
-## Project Context
+The project should be evaluated as a mobile frontend architecture and interface redesign case study rather than a production service integration.
 
-During my PTT internship, I worked on a self-developed React Native project that reimagines selected PTT Mobile style screens and flows. The goal was to practice enterprise-scale mobile interface thinking: cleaner screen organization, reusable UI parts, multilingual text handling and maintainable navigation.
+## App Screens
 
-This repository should be evaluated as a frontend/UI architecture project, not as an official PTT product repository.
+The screenshots below are captured from the iOS simulator. Additional screenshots can be added to the `App Images/` folder using the same naming style.
+
+| Promotion | Login | Register |
+| --- | --- | --- |
+| <img src="App%20Images/promotion.jpg" width="220" alt="Promotion screen"> | <img src="App%20Images/login.jpg" width="220" alt="Login screen"> | <img src="App%20Images/register.jpg" width="220" alt="Register screen"> |
+
+| Main Menu | Drawer Menu | Search |
+| --- | --- | --- |
+| <img src="App%20Images/main-menu.jpg" width="220" alt="Main menu"> | <img src="App%20Images/drawer-menu.jpg" width="220" alt="Drawer menu"> | <img src="App%20Images/search.jpg" width="220" alt="Search overlay"> |
+
+| Cargo Tracking |
+| --- |
+| <img src="App%20Images/cargo-tracking.jpg" width="220" alt="Cargo tracking"> |
 
 ## Highlights
 
 - React Native + TypeScript mobile implementation
-- Authentication flow screens: login, register, forgot password, activation code and reset password
-- Drawer-based navigation structure
-- Reusable component system for buttons, inputs, headers, drawer and search UI
-- Turkish/English i18n structure with JSON-based language files
-- Search overlay and menu search behavior
-- Responsive layout, safe-area handling, splash screen and app asset work
-- Modular file organization for larger mobile app maintainability
+- PTT Mobile-inspired interface redesign study
+- Modular screen structure organized by feature area
+- Authentication flow screens: promotion, login, register, forgot password, activation code, and reset password
+- Main menu and drawer-based navigation foundations
+- Reusable button, input, header, drawer, stepper, segmented control, and search components
+- Turkish and English localization with JSON-based language files
+- Search overlay and language-aware menu search behavior
+- Safe-area handling, responsive sizing, splash screen, and app asset setup
+- Foundation screens for cargo, Kargomat, telegraph, philately, profile, contact, and nearby PTT flows
 
-## Main Feature Areas
+## Feature Areas
 
 ### Authentication
 
+- Promotion/onboarding screen
 - Login screen
-- Register screen
+- Register flow
 - Forgot password flow
 - Activation code step
 - New password step
 - Form validation and multilingual error messages
 
-### Localization
+### Main Experience
 
-- Turkish and English language support
-- JSON-based language files
-- Runtime language-switching structure
-- i18n use across screens and validation text
+- Main service menu
+- Drawer navigation
+- Profile, contact, and about screens
+- Nearby PTT screen foundation
+- Postcode and shipment calculation screens
 
-### Navigation
+### Cargo
 
-- Drawer menu structure
-- Main menu and submodule navigation foundations
-- Routing structure for More, Telegram Services, Kargomat and Philately sections
+- Cargo tracking screen
+- Individual order flow
+- Individual pre-acceptance flow
 
-### Search Experience
+### Kargomat
 
-- SearchOverlay and SearchOverlayView components
-- Language-aware menu search behavior
-- Fast access pattern for menu and transaction discovery
+- Nearest Kargomat screen
+- Kargomat shipment screen
+- Kargomat information screen
+- Usage guide screen
 
-### Reusable UI
+### Additional PTT Services
 
-- Button components
-- Input components
-- Header components
-- Drawer components
-- Search components
-- Shared UI patterns for repeated screens
+- Telegraph service screens
+- Philately product screens
+- Announcements and purchased products screens
 
-## Tech Stack
+## Technical Stack
 
 | Area | Technologies |
 | --- | --- |
 | Mobile | React Native, TypeScript |
-| Navigation | React Navigation, Drawer navigation |
-| Localization | i18n, JSON language files |
-| UI Architecture | Reusable components, modular screens |
-| Design Focus | Mobile UI/UX, responsive layout, safe area handling |
+| Navigation | React Navigation, Native Stack |
+| Forms & Validation | Formik, Yup |
+| Localization | i18next, react-i18next, JSON language files |
+| UI Foundation | Reusable components, responsive sizing, safe-area handling |
+| Native UX | Boot splash, device info, keyboard handling, gesture handler |
+| Styling | React Native StyleSheet, shared theme colors and fonts |
 
-## Project Structure
+## Architecture Notes
+
+The codebase is organized around feature modules and shared UI primitives:
 
 ```text
-modules/   Feature-based screens and modules
-shared/    Reusable components, hooks and utilities
-assets/    Images, icons and application assets
-app/       Navigation and app entry structure
+src/modules/   Feature-based screens and module exports
+src/shared/    Reusable components, i18n, theme, storage and utilities
+src/app/       App entry, navigation setup and route definitions
+src/assets/    Icons, images and app visual assets
+assets/        Boot splash assets
 ```
 
-## Completed Scope
+This structure keeps business areas separated while allowing common interface elements to be reused across screens. The project includes a practical foundation for scaling a mobile frontend into more detailed service flows later.
 
-- Login, register and reset password screens
-- Activation code and new password steps
-- Drawer menu structure
-- Search overlay and search logic
-- Main menu screen
-- Shared component foundation
-- Turkish/English i18n support
-- Splash screen, app icon and safe-area improvements
-- Initial navigation wiring
+## What This Project Demonstrates
 
-## Planned Improvements
+- Translating a real-world mobile application style into a modular React Native implementation
+- Designing reusable mobile UI components instead of one-off screens
+- Structuring navigation for a multi-service mobile application
+- Handling bilingual interface text with i18n
+- Building form-heavy authentication flows with validation
+- Thinking about enterprise mobile maintainability during an internship project
 
-- Complete detailed cargo module screens
-- Expand Telegram Services, Kargomat and Philately content
-- Centralize shared hook structure
-- Add API service layer
-- Improve visual assets in main cards
-- Add a public demo video/GIF for recruiter review
+## Development
 
-## Installation
-
-> React Native Android or iOS development environment is required.
+> React Native iOS or Android development environment is required.
 
 ```bash
 git clone https://github.com/Emirbal23/Pttmobil.git
 cd Pttmobil
 npm install
-```
-
-### Android
-
-```bash
-npm run android
 ```
 
 ### iOS
@@ -131,21 +132,26 @@ cd ..
 npm run ios
 ```
 
+### Android
+
+```bash
+npm run android
+```
+
 ### Metro
 
 ```bash
 npm start
 ```
 
-## What This Project Demonstrates
+## Disclaimer
 
-- Ability to translate a large mobile app experience into modular React Native screens
-- Understanding of reusable UI architecture and maintainable folder structure
-- Practical TypeScript usage in mobile development
-- Attention to localization, navigation and responsive mobile layout
-- Internship-based product thinking in a corporate mobile application context
+This project is a personal/internship interface redesign study. It does not contain official PTT production code, does not connect to official PTT systems, and should not be treated as an official PTT product.
 
 ## Developer
 
-Emirhan Bal  
+**Emirhan Bal**<br>
 Computer Engineering Student | React Native Developer | TypeScript | Mobile Application Development
+
+- GitHub: [github.com/Emirbal23](https://github.com/Emirbal23)
+- LinkedIn: [linkedin.com/in/emirhan-bal-551239253](https://www.linkedin.com/in/emirhan-bal-551239253/)
